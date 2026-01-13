@@ -1,8 +1,5 @@
 name: Deploy Jekyll site to GitHub Pages
 
-include:
-  - css
-
 on:
   push:
     branches: ["main"]
