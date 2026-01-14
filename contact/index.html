@@ -105,8 +105,11 @@
         <input type="hidden" name="_subject" value="GlobalSecureIT Contact">
         <input type="hidden" name="_template" value="table">
 
-        <button type="submit">Send</button>
+        <button type="submit" id="submitBtn">Send</button>
       </form>
+
+      <!-- Inline status message -->
+      <p id="formStatus" style="display:none; margin-top:1rem;"></p>
 
     </div>
 
@@ -125,12 +128,17 @@
   // Footer year
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  // Formspree AJAX submit
+  // Formspree AJAX submit with UX tweaks
   const form = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const statusMsg = document.getElementById('formStatus');
 
   if (form) {
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
 
       const formData = new FormData(form);
 
@@ -144,13 +152,25 @@
         });
 
         if (response.ok) {
-          // Success → go home
-          window.location.href = '/';
+          statusMsg.style.display = 'block';
+          statusMsg.textContent = 'Thank you — your message has been sent.';
+          statusMsg.style.color = 'green';
+
+          // Small pause, then go home
+          setTimeout(() => {
+            window.location.href = '/';
+          }, 1500);
         } else {
-          alert('There was a problem submitting the form. Please try again.');
+          throw new Error('Submission failed');
         }
+
       } catch (error) {
-        alert('Network error. Please try again.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send';
+
+        statusMsg.style.display = 'block';
+        statusMsg.textContent = 'There was a problem sending your message. Please try again.';
+        statusMsg.style.color = 'red';
       }
     });
   }
