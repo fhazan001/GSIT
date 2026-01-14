@@ -415,6 +415,10 @@
   text-decoration: none;
 }
 
+.insight-card-link * {
+  text-decoration: none;
+}
+
 /* Keep text grouped, image pushed down */
 .insight-card-link p {
   flex-grow: 1;
