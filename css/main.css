@@ -407,9 +407,13 @@
         }
 
 .insight-card-link {
-  display: block;
-  color: inherit;
-  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.insight-card-link p {
+  flex-grow: 1;
 }
 
 .insight-card-link:hover .insight-cta {
