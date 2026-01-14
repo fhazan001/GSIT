@@ -37,7 +37,6 @@
 
 <main>
 
-<!-- HERO -->
 <section class="hero">
   <div class="container">
     <h1>Let’s Talk</h1>
@@ -50,66 +49,64 @@
 <section class="contact-section">
   <div class="container contact-grid">
 
-    <!-- LEFT: CONTACT INFO -->
-   <div class="contact-info contact-info-light">
-  <h2>Get in Touch</h2>
+    <div class="contact-info contact-info-light">
+      <h2>Get in Touch</h2>
 
-  <p>
-    Whether you’re evaluating your security posture, planning a transformation,
-    or need executive-level guidance, we’re happy to talk.
-  </p>
+      <p>
+        Whether you’re evaluating your security posture, planning a transformation,
+        or need executive-level guidance, we’re happy to talk.
+      </p>
 
-  <div class="contact-item">
-    <strong>Phone</strong><br>
-    <a href="tel:516-946-1802">516-946-1802</a>
-  </div>
+      <div class="contact-item">
+        <strong>Phone</strong><br>
+        <a href="tel:516-946-1802">516-946-1802</a>
+      </div>
 
-  <div class="contact-item">
-    <strong>Email</strong><br>
-    <a href="mailto:fred@globallysecureit.com">fred@globallysecureit.com</a>
-  </div>
+      <div class="contact-item">
+        <strong>Email</strong><br>
+        <a href="mailto:fred@globallysecureit.com">fred@globallysecureit.com</a>
+      </div>
 
-  <div class="contact-item">
-    <strong>LinkedIn</strong><br>
-    <a href="https://www.linkedin.com/company/globally-secure-it/"
-       target="_blank" rel="noopener">
-      Globally Secure IT
-    </a>
-  </div>
-</div>
+      <div class="contact-item">
+        <strong>LinkedIn</strong><br>
+        <a href="https://www.linkedin.com/company/globally-secure-it/"
+           target="_blank" rel="noopener">
+          Globally Secure IT
+        </a>
+      </div>
+    </div>
 
-
-    <!-- RIGHT: CONTACT FORM -->
     <div class="contact-form">
       <h2>Send a Message</h2>
 
-      <form action="https://formspree.io/f/meeeoejo" method="POST">
-  <label>
-    Name
-    <input type="text" name="name" required>
-  </label>
+      <form id="contactForm"
+            action="https://formspree.io/f/meeeoejo"
+            method="POST">
 
-  <label>
-    Email
-    <input type="email" name="email" required>
-  </label>
+        <label>
+          Name
+          <input type="text" name="name" required>
+        </label>
 
-  <label>
-    Message
-    <textarea name="message" required></textarea>
-  </label>
+        <label>
+          Email
+          <input type="email" name="email" required>
+        </label>
 
-  <!-- Honeypot -->
-  <input type="text" name="_gotcha" style="display:none">
+        <label>
+          Message
+          <textarea name="message" required></textarea>
+        </label>
 
-  <!-- Optional -->
-  <input type="hidden" name="_subject" value="GlobalSecureIT Contact">
-  <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_next" value="/contact/thanks.html">
+        <!-- Honeypot -->
+        <input type="text" name="_gotcha" style="display:none">
 
+        <!-- Optional -->
+        <input type="hidden" name="_subject" value="GlobalSecureIT Contact">
+        <input type="hidden" name="_template" value="table">
 
-  <button type="submit">Send</button>
-</form>
+        <button type="submit">Send</button>
+      </form>
 
     </div>
 
@@ -125,7 +122,38 @@
 </footer>
 
 <script>
+  // Footer year
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Formspree AJAX submit
+  const form = document.getElementById('contactForm');
+
+  if (form) {
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          // Success → go home
+          window.location.href = '/';
+        } else {
+          alert('There was a problem submitting the form. Please try again.');
+        }
+      } catch (error) {
+        alert('Network error. Please try again.');
+      }
+    });
+  }
 </script>
 
 </body>
