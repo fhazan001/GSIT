@@ -568,3 +568,15 @@
 section {
   scroll-margin-top: 90px;
 }
+/* INSIGHTS: override global link underline */
+a.insight-card-link,
+a.insight-card-link *,
+a.insight-card-link:hover,
+a.insight-card-link:hover * {
+  text-decoration: none !important;
+}
+
+/* Re-enable underline only for CTA */
+a.insight-card-link:hover .insight-cta {
+  text-decoration: underline !important;
+}
