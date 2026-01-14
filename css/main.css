@@ -463,3 +463,7 @@
                 margin: 0 auto;
             }
         }
+/* Fix anchor scrolling under fixed header */
+section {
+  scroll-margin-top: 90px;
+}
