@@ -580,6 +580,4 @@ a.insight-card-link:hover * {
 a.insight-card-link:hover .insight-cta {
   text-decoration: underline !important;
 }
-.insight-card-link {
-  outline: 5px solid red !important;
-}
+
