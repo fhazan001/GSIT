@@ -152,6 +152,14 @@
             background: #f8fafc;
         }
         
+        #industry-tags {
+            background: #f8fafc;
+        }
+        
+        #industry-services {
+            background: #ffffff;
+        }
+        
         #insights {
             background: #ffffff;
         }
@@ -381,6 +389,7 @@
             color: #f59e0b;
             font-weight: bold;
         }
+
         .insights-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
