@@ -477,24 +477,33 @@
             text-decoration: underline;
         }
 
-    /* Contact page – force light info panel */
-.contact-section .contact-info.contact-info-light {
-  background-color: #ffffff !important;
-  color: #0f2a44 !important;
+ /* Contact – light info card */
+.contact-info-light {
+  background: #ffffff;
+  color: #0f2a44;
   padding: 3rem;
-  border-radius: 12px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
 }
 
-.contact-section .contact-info.contact-info-light h2,
-.contact-section .contact-info.contact-info-light p,
-.contact-section .contact-info.contact-info-light a {
-  color: #0f2a44 !important;
+.contact-info-light h2 {
+  color: #0f2a44;
 }
 
-.contact-section .contact-info.contact-info-light a:hover {
+.contact-info-light p {
+  color: #1f3a5a;
+}
+
+.contact-info-light a {
+  color: #0f2a44;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-info-light a:hover {
   text-decoration: underline;
 }
+
 
   
         footer {
