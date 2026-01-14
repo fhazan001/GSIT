@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://globallysecureit.com/sitemap.xml
+
