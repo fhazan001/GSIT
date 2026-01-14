@@ -476,7 +476,38 @@
         .contact-item a:hover {
             text-decoration: underline;
         }
-        
+
+    /* Contact page – light info panel */
+      .contact-info-light {
+        background: #ffffff;
+        color: #0f2a44; /* dark navy */
+        padding: 3rem;
+        border-radius: 12px;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      }
+
+      .contact-info-light h2 {
+         color: #0f2a44;
+      }
+
+      .contact-info-light p {
+        color: #1f3a5a;
+      }
+
+      .contact-info-light a {
+        color: #0f2a44;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .contact-info-light a:hover {
+        text-decoration: underline;
+      }
+
+      .contact-info-light .contact-item {
+        margin-top: 1.25rem;
+      }
+  
         footer {
             background: #1a202c;
             color: white;
