@@ -3,3 +3,5 @@ Allow: /
 
 Sitemap: https://globallysecureit.com/sitemap.xml
 
+Disallow: /cdn-cgi/
+
