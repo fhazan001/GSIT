@@ -320,6 +320,17 @@ h2 {
   opacity: 1;
 }
 
+.partners-logos a {
+  flex: 0 0 auto;          /* do NOT let anchors stretch */
+}
+
+.partners-logos img {
+  height: 60px;
+  width: auto;
+  max-width: 180px;        /* key line */
+  object-fit: contain;
+}
+
 /* ==========================================================
    INSIGHTS
    ========================================================== */
