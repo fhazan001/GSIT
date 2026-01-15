@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Avenir Next', 'Segoe UI', Roboto, Arial, sans-serif;
   line-height: 1.6;
@@ -28,49 +32,65 @@ img {
 
 section {
   padding: 5rem 0;
-  scroll-margin-top: 90px;
+  scroll-margin-top: 90px; /* matches locked header */
 }
 
 /* ==========================================================
-   HEADER & NAVIGATION (LOCKED DESKTOP)
+   HEADER & NAV — HARD LOCKED HEIGHT
    ========================================================== */
 
 header {
   background: #ffffff;
-  padding: 1rem 0;
   position: sticky;
   top: 0;
   z-index: 1000;
+
+  height: 90px;              /* 🔒 CRITICAL */
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
 nav {
   display: flex;
   align-items: center;
-  flex-wrap: nowrap; /* desktop locked */
+  height: 100%;              /* 🔒 */
 }
 
 .logo {
   flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .logo img {
-  height: 50px;
+  height: 48px;
   width: auto;
 }
 
 .nav-links {
-  display: flex;
   list-style: none;
+  display: flex;
   gap: 2rem;
-  margin-left: auto;     /* anchor nav to the right */
+
+  margin-left: auto;         /* push right */
+  height: 100%;
+  align-items: center;
+
   flex-wrap: nowrap;
+  line-height: 1;            /* 🔒 prevents height drift */
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
 }
 
 .nav-links a {
-  color: #1e3a5f;
   text-decoration: none;
+  color: #1e3a5f;
   font-weight: 500;
+
+  padding: 0;                /* 🔒 no vertical padding */
   white-space: nowrap;
 }
 
@@ -117,6 +137,24 @@ nav {
 }
 
 /* ==========================================================
+   TYPOGRAPHY
+   ========================================================== */
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1e3a5f;
+  text-align: center;
+}
+
+.section-intro {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  color: #334155;
+}
+
+/* ==========================================================
    BUTTONS
    ========================================================== */
 
@@ -124,7 +162,6 @@ nav {
   padding: 1rem 2rem;
   border-radius: 6px;
   text-decoration: none;
-  font-size: 1rem;
   display: inline-block;
   transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -145,32 +182,13 @@ nav {
 }
 
 /* ==========================================================
-   TYPOGRAPHY
+   CARDS
    ========================================================== */
 
-h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #1e3a5f;
-  text-align: center;
-}
-
-.section-intro {
-  max-width: 800px;
-  margin: 0 auto 3rem;
-  text-align: center;
-  color: #334155;
-}
-
-/* ==========================================================
-   CARD SYSTEM (SERVICES / INDUSTRIES / INSIGHTS)
-   ========================================================== */
-
-.card,
 .service-card,
 .industry-card,
 .insight-card {
-  background: #ffffff;
+  background: white;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
@@ -200,24 +218,6 @@ h2 {
 }
 
 /* ==========================================================
-   LEADERSHIP
-   ========================================================== */
-
-.leadership {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 3rem;
-  align-items: center;
-  max-width: 900px;
-  margin: 3rem auto 0;
-}
-
-.leadership-photo {
-  border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-}
-
-/* ==========================================================
    PARTNERS
    ========================================================== */
 
@@ -244,12 +244,8 @@ h2 {
   opacity: 0.85;
 }
 
-.partners-logos img:hover {
-  opacity: 1;
-}
-
 /* ==========================================================
-   INDUSTRIES (BOXES RESTORED)
+   INDUSTRIES — BOXES RESTORED
    ========================================================== */
 
 .industry-grid {
@@ -303,7 +299,6 @@ h2 {
 
 .insight-image {
   width: 100%;
-  height: auto;
   margin-top: 1rem;
   border-radius: 6px;
   object-fit: cover;
@@ -316,22 +311,8 @@ h2 {
 }
 
 /* ==========================================================
-   CONTACT & FOOTER
+   FOOTER
    ========================================================== */
-
-.contact-section {
-  background: #1e3a5f;
-  color: white;
-  text-align: center;
-}
-
-.contact-info-light {
-  background: white;
-  color: #0f2a44;
-  padding: 3rem;
-  border-radius: 14px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-}
 
 footer {
   background: #1a202c;
@@ -341,10 +322,14 @@ footer {
 }
 
 /* ==========================================================
-   RESPONSIVE (MOBILE ONLY)
+   MOBILE (INTENTIONAL STACKING)
    ========================================================== */
 
 @media (max-width: 768px) {
+  header {
+    height: auto;
+  }
+
   nav {
     flex-wrap: wrap;
   }
@@ -359,10 +344,5 @@ footer {
 
   .hero h1 {
     font-size: 2rem;
-  }
-
-  .leadership {
-    grid-template-columns: 1fr;
-    text-align: center;
   }
 }
