@@ -1,173 +1,335 @@
-/* =====================================================
-   BASE RESET
-   ===================================================== */
+/* ==========================================================
+   RESET & GLOBALS
+   ========================================================== */
 
-*,
-*::before,
-*::after {
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-html,
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: 'Avenir Next', 'Segoe UI', Roboto, Arial, sans-serif;
+  line-height: 1.6;
   color: #1e293b;
-  background: #ffffff;
 }
 
 img {
-  display: block;
   max-width: 100%;
   height: auto;
+  display: block;
 }
-
-/* =====================================================
-   CONTAINER
-   ===================================================== */
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 20px;
 }
 
-/* =====================================================
-   HEADER / NAV  (DO NOT OVER-ENGINEER)
-   ===================================================== */
+section {
+  padding: 5rem 0;
+  scroll-margin-top: 90px; /* matches locked header */
+}
+
+/* ==========================================================
+   HEADER & NAV — HARD LOCKED HEIGHT
+   ========================================================== */
 
 header {
-  width: 100%;
   background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  height: 90px;              /* 🔒 CRITICAL */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
 nav {
   display: flex;
   align-items: center;
+  height: 100%;              /* 🔒 */
 }
 
-/* LOGO — this is the critical, correct version */
 .logo {
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 .logo img {
-  height: 50px;      /* the size you know works */
+  height: 48px;
   width: auto;
-  max-width: none;
-  flex-shrink: 0;
 }
 
-/* NAV LINKS */
 .nav-links {
+  list-style: none;
   display: flex;
   gap: 2rem;
-  margin-left: auto;
-  padding: 0;
-  list-style: none;
+
+  margin-left: auto;         /* push right */
+  height: 100%;
   align-items: center;
+
   flex-wrap: nowrap;
+  line-height: 1;            /* 🔒 prevents height drift */
 }
 
 .nav-links li {
   display: flex;
+  align-items: center;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #1e3a5f;
   font-weight: 500;
+
+  padding: 0;                /* 🔒 no vertical padding */
   white-space: nowrap;
 }
 
 .nav-links a:hover {
-  text-decoration: underline;
+  opacity: 0.8;
 }
 
-/* =====================================================
-   SECTIONS (NO OPINIONS)
-   ===================================================== */
+/* ==========================================================
+   HERO
+   ========================================================== */
 
-section {
-  padding: 3rem 0;
+.hero {
+  background: #1e3a5f;
+  color: white;
+  padding: 6rem 0;
+  text-align: center;
+  position: relative;
 }
 
-/* =====================================================
-   INSIGHTS (ONLY WHAT IS REQUIRED)
-   ===================================================== */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(30,58,95,0.95),
+    rgba(20,40,70,0.98)
+  );
+}
 
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero .tagline {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+/* ==========================================================
+   TYPOGRAPHY
+   ========================================================== */
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1e3a5f;
+  text-align: center;
+}
+
+.section-intro {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  color: #334155;
+}
+
+/* ==========================================================
+   BUTTONS
+   ========================================================== */
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary {
+  background: #f59e0b;
+  color: white;
+}
+
+.btn-secondary {
+  background: white;
+  color: #1e3a5f;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* ==========================================================
+   CARDS
+   ========================================================== */
+
+.service-card,
+.industry-card,
 .insight-card {
-  background: #ffffff;
-  border-radius: 12px;
-  overflow: hidden;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* ==========================================================
+   SERVICES / FEATURES
+   ========================================================== */
+
+.features,
+.services-grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.features {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.services-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.service-card {
+  border-left: 4px solid #f59e0b;
+}
+
+/* ==========================================================
+   PARTNERS
+   ========================================================== */
+
+.partners-section {
+  text-align: center;
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 2px solid #e2e8f0;
+}
+
+.partners-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.partners-logos img {
+  height: 60px;
+  max-width: 180px;
+  object-fit: contain;
+  opacity: 0.85;
+}
+
+/* ==========================================================
+   INDUSTRIES — BOXES RESTORED
+   ========================================================== */
+
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.industry-card {
+  border-left: 4px solid #f59e0b;
+}
+
+.industry-card ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.industry-card li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.industry-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #f59e0b;
+  font-weight: bold;
+}
+
+/* ==========================================================
+   INSIGHTS
+   ========================================================== */
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
 .insight-card-link {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 1.5rem;
   text-decoration: none;
   color: inherit;
 }
 
 .insight-image {
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.insight-cta {
   margin-top: auto;
-  width: 100%;
-  height: auto;
+  font-weight: 600;
+  color: #1e3a5f;
 }
 
-/* =====================================================
-   INDUSTRIES (BOXES ONLY)
-   ===================================================== */
+/* ==========================================================
+   FOOTER
+   ========================================================== */
 
-.industries-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
+footer {
+  background: #1a202c;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
 }
 
-/* =====================================================
-   PARTNERS
-   ===================================================== */
-
-.partners-logos {
-  display: flex;
-  gap: 3rem;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.partner-logo {
-  max-height: 80px;
-  width: auto;
-  object-fit: contain;
-}
-
-/* =====================================================
-   FORMS (CONTACT SAFE)
-   ===================================================== */
-
-form {
-  max-width: 640px;
-}
-
-input,
-textarea,
-button {
-  font-size: 1rem;
-  width: 100%;
-}
-
-/* =====================================================
-   MOBILE (ONLY WHEN NECESSARY)
-   ===================================================== */
+/* ==========================================================
+   MOBILE (INTENTIONAL STACKING)
+   ========================================================== */
 
 @media (max-width: 768px) {
+  header {
+    height: auto;
+  }
+
   nav {
     flex-wrap: wrap;
   }
@@ -175,8 +337,12 @@ button {
   .nav-links {
     width: 100%;
     justify-content: center;
-    margin-top: 1rem;
     margin-left: 0;
+    margin-top: 1rem;
     flex-wrap: wrap;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
   }
 }
