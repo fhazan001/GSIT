@@ -1,5 +1,5 @@
 /* =====================================================
-   RESET / BASE
+   BASE RESET
    ===================================================== */
 
 *,
@@ -8,69 +8,61 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: #1e293b;
-  background-color: #ffffff;
+  background: #ffffff;
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
-  display: block;
 }
 
 /* =====================================================
-   LAYOUT CONTAINER
+   CONTAINER
    ===================================================== */
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 0 24px;
 }
 
 /* =====================================================
-   HEADER / NAVIGATION  (LOCKED & SAFE)
+   HEADER / NAV  (DO NOT OVER-ENGINEER)
    ===================================================== */
 
 header {
   width: 100%;
   background: #ffffff;
-  position: relative;
-  z-index: 1000;
-  clear: both; /* protects against floated elements */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-header .container {
-  max-width: 100%;
-}
-
-header nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 88px;
-  width: 100%;
-}
-
-header .logo {
-  flex: 0 0 auto;
+nav {
   display: flex;
   align-items: center;
 }
 
-header .logo img {
-  height: 48px;
+/* LOGO — this is the critical, correct version */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;      /* the size you know works */
   width: auto;
+  max-width: none;
+  flex-shrink: 0;
 }
 
-header .nav-links {
+/* NAV LINKS */
+.nav-links {
   display: flex;
   gap: 2rem;
   margin-left: auto;
@@ -80,53 +72,36 @@ header .nav-links {
   flex-wrap: nowrap;
 }
 
-header .nav-links li {
+.nav-links li {
   display: flex;
 }
 
-header .nav-links a {
+.nav-links a {
   text-decoration: none;
-  font-weight: 500;
   color: #1e3a5f;
+  font-weight: 500;
   white-space: nowrap;
 }
 
-header .nav-links a:hover {
+.nav-links a:hover {
   text-decoration: underline;
 }
 
 /* =====================================================
-   HERO / SECTIONS
+   SECTIONS (NO OPINIONS)
    ===================================================== */
 
 section {
-  padding: 4rem 0;
-}
-
-.hero {
-  background: #0f172a;
-  color: #ffffff;
-}
-
-.hero h1,
-.hero p {
-  max-width: 800px;
+  padding: 3rem 0;
 }
 
 /* =====================================================
-   INSIGHTS / CARDS
+   INSIGHTS (ONLY WHAT IS REQUIRED)
    ===================================================== */
-
-.insights-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
 
 .insight-card {
   background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   overflow: hidden;
 }
 
@@ -139,20 +114,14 @@ section {
   color: inherit;
 }
 
-.insight-card h3 {
-  margin-top: 0;
-}
-
 .insight-image {
   margin-top: auto;
   width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
+  height: auto;
 }
 
 /* =====================================================
-   INDUSTRIES
+   INDUSTRIES (BOXES ONLY)
    ===================================================== */
 
 .industries-grid {
@@ -161,20 +130,9 @@ section {
   gap: 2rem;
 }
 
-.industry-card {
-  background: #f8fafc;
-  padding: 2rem;
-  border-radius: 12px;
-  text-align: center;
-}
-
 /* =====================================================
    PARTNERS
    ===================================================== */
-
-.partners-section {
-  text-align: center;
-}
 
 .partners-logos {
   display: flex;
@@ -191,57 +149,34 @@ section {
 }
 
 /* =====================================================
-   FORMS (CONTACT PAGE SAFE)
+   FORMS (CONTACT SAFE)
    ===================================================== */
 
 form {
   max-width: 640px;
-  margin: 0 auto;
 }
 
 input,
 textarea,
 button {
-  width: 100%;
-  padding: 0.75rem;
   font-size: 1rem;
-}
-
-button {
-  background: #1e3a5f;
-  color: #ffffff;
-  border: none;
-  cursor: pointer;
+  width: 100%;
 }
 
 /* =====================================================
-   FOOTER
-   ===================================================== */
-
-footer {
-  background: #0f172a;
-  color: #ffffff;
-  padding: 3rem 0;
-}
-
-/* =====================================================
-   RESPONSIVE
+   MOBILE (ONLY WHEN NECESSARY)
    ===================================================== */
 
 @media (max-width: 768px) {
-  header nav {
+  nav {
     flex-wrap: wrap;
   }
 
-  header .nav-links {
+  .nav-links {
     width: 100%;
     justify-content: center;
     margin-top: 1rem;
     margin-left: 0;
     flex-wrap: wrap;
-  }
-
-  section {
-    padding: 3rem 0;
   }
 }
