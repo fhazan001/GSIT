@@ -1,21 +1,20 @@
-/* ==========================================================
-   RESET & GLOBALS
-   ========================================================== */
+/* =====================================================
+   RESET / BASE
+   ===================================================== */
 
-* {
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Avenir Next', 'Segoe UI', Roboto, Arial, sans-serif;
-  line-height: 1.6;
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: #1e293b;
+  background-color: #ffffff;
 }
 
 img {
@@ -24,341 +23,225 @@ img {
   display: block;
 }
 
-/* Boxed layout for main content */
+/* =====================================================
+   LAYOUT CONTAINER
+   ===================================================== */
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
-section {
-  padding: 5rem 0;
-  scroll-margin-top: 90px;
-}
-
-/* ==========================================================
-   HEADER — FULL WIDTH
-   ========================================================== */
+/* =====================================================
+   HEADER / NAVIGATION  (LOCKED & SAFE)
+   ===================================================== */
 
 header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  width: 100%;
   background: #ffffff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  position: relative;
+  z-index: 1000;
+  clear: both; /* protects against floated elements */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-/* Break header out of the box */
 header .container {
-  max-width: none;              /* full width */
-  padding-left: 48px;
-  padding-right: 48px;
+  max-width: 100%;
 }
 
-/* Nav owns height & alignment */
-nav {
+header nav {
   display: flex;
   align-items: center;
-  min-height: 90px;
+  justify-content: flex-start;
+  min-height: 88px;
+  width: 100%;
 }
 
-/* Logo */
-.logo {
+header .logo {
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
 }
 
-.logo img {
+header .logo img {
   height: 48px;
   width: auto;
 }
 
-/* Nav links */
-.nav-links {
-  list-style: none;
+header .nav-links {
   display: flex;
-  align-items: center;
   gap: 2rem;
+  margin-left: auto;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+  flex-wrap: nowrap;
+}
 
-  margin-left: auto;            /* push to right edge */
+header .nav-links li {
+  display: flex;
+}
+
+header .nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #1e3a5f;
   white-space: nowrap;
 }
 
-.nav-links a {
-  color: #1e3a5f;
-  text-decoration: none;
-  font-weight: 500;
+header .nav-links a:hover {
+  text-decoration: underline;
 }
 
-.nav-links a:hover {
-  opacity: 0.8;
-}
+/* =====================================================
+   HERO / SECTIONS
+   ===================================================== */
 
-/* ==========================================================
-   HERO
-   ========================================================== */
+section {
+  padding: 4rem 0;
+}
 
 .hero {
-  background: #1e3a5f;
-  color: white;
-  padding: 6rem 0;
-  text-align: center;
-  position: relative;
+  background: #0f172a;
+  color: #ffffff;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(30,58,95,0.95),
-    rgba(20,40,70,0.98)
-  );
-}
-
-.hero .container {
-  position: relative;
-  z-index: 1;
-}
-
-/* ==========================================================
-   TYPOGRAPHY
-   ========================================================== */
-
-h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #1e3a5f;
-  text-align: center;
-}
-
-.section-intro {
+.hero h1,
+.hero p {
   max-width: 800px;
-  margin: 0 auto 3rem;
-  text-align: center;
-  color: #334155;
 }
 
-/* ==========================================================
-   BUTTONS
-   ========================================================== */
-
-.btn {
-  padding: 1rem 2rem;
-  border-radius: 6px;
-  text-decoration: none;
-  display: inline-block;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.btn-primary {
-  background: #f59e0b;
-  color: white;
-}
-
-.btn-secondary {
-  background: white;
-  color: #1e3a5f;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-}
-
-/* ==========================================================
-   CARDS
-   ========================================================== */
-
-.service-card,
-.industry-card,
-.insight-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
-/* ==========================================================
-   SERVICES / FEATURES
-   ========================================================== */
-
-.features,
-.services-grid {
-  display: grid;
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.features {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
-.services-grid {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.service-card {
-  border-left: 4px solid #f59e0b;
-}
-
-/* ==========================================================
-   PARTNERS
-   ========================================================== */
-
-.partners-section {
-  text-align: center;
-  margin-top: 4rem;
-  padding-top: 3rem;
-  border-top: 2px solid #e2e8f0;
-}
-
-.partners-logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  margin-top: 2rem;
-  flex-wrap: wrap;
-}
-
-.partners-logos img {
-  height: 60px;
-  max-width: 180px;
-  object-fit: contain;
-  opacity: 0.85;
-}
-
-/* ==========================================================
-   INDUSTRIES
-   ========================================================== */
-
-.industry-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.industry-card {
-  border-left: 4px solid #f59e0b;
-}
-
-.industry-card ul {
-  list-style: none;
-  margin-top: 1rem;
-}
-
-.industry-card li {
-  padding-left: 1.5rem;
-  position: relative;
-  margin-bottom: 0.5rem;
-}
-
-.industry-card li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: #f59e0b;
-  font-weight: bold;
-}
-
-/* ==========================================================
-   INSIGHTS
-   ========================================================== */
+/* =====================================================
+   INSIGHTS / CARDS
+   ===================================================== */
 
 .insights-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  margin-top: 3rem;
+}
+
+.insight-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  overflow: hidden;
 }
 
 .insight-card-link {
   display: flex;
   flex-direction: column;
   height: 100%;
+  padding: 1.5rem;
   text-decoration: none;
   color: inherit;
 }
 
+.insight-card h3 {
+  margin-top: 0;
+}
+
 .insight-image {
-  width: 100%;
-  margin-top: 1rem;
-  border-radius: 6px;
-  object-fit: cover;
-}
-
-.insight-cta {
   margin-top: auto;
-  font-weight: 600;
-  color: #1e3a5f;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-/* ==========================================================
+/* =====================================================
+   INDUSTRIES
+   ===================================================== */
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.industry-card {
+  background: #f8fafc;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* =====================================================
+   PARTNERS
+   ===================================================== */
+
+.partners-section {
+  text-align: center;
+}
+
+.partners-logos {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.partner-logo {
+  max-height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* =====================================================
+   FORMS (CONTACT PAGE SAFE)
+   ===================================================== */
+
+form {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+button {
+  background: #1e3a5f;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+/* =====================================================
    FOOTER
-   ========================================================== */
+   ===================================================== */
 
 footer {
-  background: #1a202c;
-  color: white;
-  text-align: center;
-  padding: 2rem 0;
+  background: #0f172a;
+  color: #ffffff;
+  padding: 3rem 0;
 }
 
-/* ==========================================================
-   MOBILE
-   ========================================================== */
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
 
 @media (max-width: 768px) {
-  header .container {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-
-  nav {
+  header nav {
     flex-wrap: wrap;
   }
 
-  .nav-links {
+  header .nav-links {
     width: 100%;
     justify-content: center;
-    margin-left: 0;
     margin-top: 1rem;
-    white-space: normal;
+    margin-left: 0;
+    flex-wrap: wrap;
   }
-}
-/* ===== HEADER ISOLATION TEST ===== */
 
-header {
-  width: 100%;
-  position: relative;
-  z-index: 1000;
-  background: #fff;
-}
-
-header .container {
-  max-width: 100%;
-  padding: 0 40px;
-}
-
-header nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  min-height: 80px;
-}
-
-header .logo {
-  flex: 0 0 auto;
-}
-
-header .nav-links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  section {
+    padding: 3rem 0;
+  }
 }
