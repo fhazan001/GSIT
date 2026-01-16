@@ -63,10 +63,8 @@
 
 <section class="hero">
   <div class="container">
-    <h1>Let’s Talk</h1>
-    <p class="tagline">
-      Start a conversation about your security strategy
-    </p>
+    <h1>Let's Talk</h1>
+    <p class="tagline">Start a conversation about your security strategy</p>
   </div>
 </section>
 
@@ -77,8 +75,8 @@
       <h2>Get in Touch</h2>
 
       <p>
-        Whether you’re evaluating your security posture, planning a transformation,
-        or need executive-level guidance, we’re happy to talk.
+        Whether you're evaluating your security posture, planning a transformation,
+        or need executive-level guidance, we're happy to talk.
       </p>
 
       <div class="contact-item">
@@ -107,20 +105,21 @@
             action="https://formspree.io/f/meeeoejo"
             method="POST">
 
-        <label>
-          Name
-          <input type="text" name="name" required>
-        </label>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
 
-        <label>
-          Email
-          <input type="email" name="email" required>
-        </label>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+          <span class="error-message" id="emailError"></span>
+        </div>
 
-        <label>
-          Message
-          <textarea name="message" required></textarea>
-        </label>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
 
         <!-- Honeypot -->
         <input type="text" name="_gotcha" style="display:none">
@@ -129,11 +128,11 @@
         <input type="hidden" name="_subject" value="GlobalSecureIT Contact">
         <input type="hidden" name="_template" value="table">
 
-        <button type="submit" id="submitBtn">Send</button>
+        <button type="submit" id="submitBtn" class="btn-submit">Send Message</button>
       </form>
 
       <!-- Inline status message -->
-      <p id="formStatus" style="display:none; margin-top:1rem;"></p>
+      <p id="formStatus" class="form-status"></p>
 
     </div>
 
@@ -152,17 +151,59 @@
   // Footer year
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  // Formspree AJAX submit with UX tweaks
+  // Email validation function
+  function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  // Formspree AJAX submit with UX tweaks and validation
   const form = document.getElementById('contactForm');
   const submitBtn = document.getElementById('submitBtn');
   const statusMsg = document.getElementById('formStatus');
+  const emailInput = document.getElementById('email');
+  const emailError = document.getElementById('emailError');
+
+  // Real-time email validation
+  if (emailInput) {
+    emailInput.addEventListener('blur', function() {
+      if (this.value && !validateEmail(this.value)) {
+        emailError.textContent = 'Please enter a valid email address';
+        emailError.style.display = 'block';
+        this.classList.add('invalid');
+      } else {
+        emailError.textContent = '';
+        emailError.style.display = 'none';
+        this.classList.remove('invalid');
+      }
+    });
+
+    emailInput.addEventListener('input', function() {
+      if (this.classList.contains('invalid') && validateEmail(this.value)) {
+        emailError.textContent = '';
+        emailError.style.display = 'none';
+        this.classList.remove('invalid');
+      }
+    });
+  }
 
   if (form) {
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
 
+      // Validate email before submission
+      const email = emailInput.value;
+      if (!validateEmail(email)) {
+        emailError.textContent = 'Please enter a valid email address';
+        emailError.style.display = 'block';
+        emailInput.classList.add('invalid');
+        emailInput.focus();
+        return;
+      }
+
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending…';
+      submitBtn.classList.add('btn-loading');
 
       const formData = new FormData(form);
 
@@ -177,24 +218,30 @@
 
         if (response.ok) {
           statusMsg.style.display = 'block';
-          statusMsg.textContent = 'Thank you — your message has been sent.';
-          statusMsg.style.color = 'green';
+          statusMsg.textContent = 'Thank you — your message has been sent successfully!';
+          statusMsg.classList.add('success');
+          statusMsg.classList.remove('error');
+
+          // Reset form
+          form.reset();
 
           // Small pause, then go home
           setTimeout(() => {
             window.location.href = '/';
-          }, 1500);
+          }, 2000);
         } else {
           throw new Error('Submission failed');
         }
 
       } catch (error) {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Send';
+        submitBtn.textContent = 'Send Message';
+        submitBtn.classList.remove('btn-loading');
 
         statusMsg.style.display = 'block';
         statusMsg.textContent = 'There was a problem sending your message. Please try again.';
-        statusMsg.style.color = 'red';
+        statusMsg.classList.add('error');
+        statusMsg.classList.remove('success');
       }
     });
   }
