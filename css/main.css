@@ -520,13 +520,14 @@
         }
         
         .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            display: block;
+            margin-bottom: 1.5rem;
         }
         
-        .contact-item span {
-            font-size: 1.5rem;
+        .contact-item strong {
+            display: block;
+            margin-bottom: 0.25rem;
+            font-size: 1rem;
         }
         
         .contact-item a {
@@ -545,14 +546,18 @@
   padding: 3rem;
   border-radius: 14px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  text-align: left;
 }
 
 .contact-info-light h2 {
   color: #0f2a44;
+  text-align: left;
 }
 
 .contact-info-light p {
   color: #1f3a5a;
+  margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
 .contact-info-light a {
@@ -586,11 +591,11 @@
   text-align: left;
 }
 
-.form-group {
+#contactForm .form-group {
   margin-bottom: 1.5rem;
 }
 
-.form-group label {
+#contactForm .form-group label {
   display: block;
   color: #0f2a44;
   font-weight: 600;
@@ -598,8 +603,9 @@
   font-size: 0.95rem;
 }
 
-.form-group input,
-.form-group textarea {
+#contactForm .form-group input[type="text"],
+#contactForm .form-group input[type="email"],
+#contactForm .form-group textarea {
   width: 100%;
   padding: 0.875rem 1rem;
   border: 2px solid #e2e8f0;
@@ -608,29 +614,31 @@
   font-family: inherit;
   transition: border-color 0.3s, box-shadow 0.3s;
   background: #ffffff;
+  box-sizing: border-box;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
+#contactForm .form-group input[type="text"]:focus,
+#contactForm .form-group input[type="email"]:focus,
+#contactForm .form-group textarea:focus {
   outline: none;
   border-color: #f59e0b;
   box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
 }
 
-.form-group input.invalid {
+#contactForm .form-group input.invalid {
   border-color: #ef4444;
 }
 
-.form-group input.invalid:focus {
+#contactForm .form-group input.invalid:focus {
   box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
 }
 
-.form-group textarea {
+#contactForm .form-group textarea {
   resize: vertical;
   min-height: 120px;
 }
 
-.error-message {
+#contactForm .error-message {
   display: none;
   color: #ef4444;
   font-size: 0.875rem;
@@ -639,7 +647,8 @@
 }
 
 /* Submit Button - Matching the "Schedule a Consultation" style */
-.btn-submit {
+#contactForm .btn-submit,
+#contactForm button[type="submit"] {
   width: 100%;
   padding: 1rem 2rem;
   background: #f59e0b;
@@ -654,27 +663,30 @@
   box-shadow: 0 4px 6px rgba(245, 158, 11, 0.3);
 }
 
-.btn-submit:hover:not(:disabled) {
+#contactForm .btn-submit:hover:not(:disabled),
+#contactForm button[type="submit"]:hover:not(:disabled) {
   background: #d97706;
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(245, 158, 11, 0.4);
 }
 
-.btn-submit:active:not(:disabled) {
+#contactForm .btn-submit:active:not(:disabled),
+#contactForm button[type="submit"]:active:not(:disabled) {
   transform: translateY(0);
 }
 
-.btn-submit:disabled {
+#contactForm .btn-submit:disabled,
+#contactForm button[type="submit"]:disabled {
   opacity: 0.7;
   cursor: not-allowed;
 }
 
-.btn-submit.btn-loading {
+#contactForm .btn-submit.btn-loading {
   position: relative;
   color: transparent;
 }
 
-.btn-submit.btn-loading::after {
+#contactForm .btn-submit.btn-loading::after {
   content: "";
   position: absolute;
   width: 20px;
