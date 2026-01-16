@@ -32,34 +32,36 @@ img {
 
 section {
   padding: 5rem 0;
-  scroll-margin-top: 90px; /* matches locked header */
+  scroll-margin-top: 90px; /* matches header min-height */
 }
 
 /* ==========================================================
-   HEADER & NAV — HARD LOCKED HEIGHT
+   HEADER & NAV (STABLE, NON-CLIPPING)
    ========================================================== */
 
 header {
-  background: #ffffff;
   position: sticky;
   top: 0;
   z-index: 1000;
 
-  height: 90px;              /* 🔒 CRITICAL */
+  background: #ffffff;
+  min-height: 90px;                 /* ✅ baseline height */
+  display: flex;
+  align-items: center;              /* vertical centering */
+
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
 nav {
   display: flex;
   align-items: center;
-  height: 100%;              /* 🔒 */
+  width: 100%;
 }
 
 .logo {
-  flex: 0 0 auto;
   display: flex;
   align-items: center;
-  height: 100%;
+  flex: 0 0 auto;
 }
 
 .logo img {
@@ -70,14 +72,13 @@ nav {
 .nav-links {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 2rem;
 
-  margin-left: auto;         /* push right */
-  height: 100%;
-  align-items: center;
-
+  margin-left: auto;                /* ✅ always right of logo */
   flex-wrap: nowrap;
-  line-height: 1;            /* 🔒 prevents height drift */
+  white-space: nowrap;              /* prevent phantom wrapping */
+  line-height: 1;                   /* prevent height drift */
 }
 
 .nav-links li {
@@ -89,9 +90,7 @@ nav {
   text-decoration: none;
   color: #1e3a5f;
   font-weight: 500;
-
-  padding: 0;                /* 🔒 no vertical padding */
-  white-space: nowrap;
+  padding: 0;                       /* no vertical padding */
 }
 
 .nav-links a:hover {
@@ -245,7 +244,7 @@ h2 {
 }
 
 /* ==========================================================
-   INDUSTRIES — BOXES RESTORED
+   INDUSTRIES
    ========================================================== */
 
 .industry-grid {
@@ -322,12 +321,12 @@ footer {
 }
 
 /* ==========================================================
-   MOBILE (INTENTIONAL STACKING)
+   MOBILE (INTENTIONAL STACK)
    ========================================================== */
 
 @media (max-width: 768px) {
   header {
-    height: auto;
+    min-height: auto;
   }
 
   nav {
@@ -340,6 +339,7 @@ footer {
     margin-left: 0;
     margin-top: 1rem;
     flex-wrap: wrap;
+    white-space: normal;
   }
 
   .hero h1 {
