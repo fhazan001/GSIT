@@ -329,3 +329,36 @@ footer {
     white-space: normal;
   }
 }
+/* ===== HEADER ISOLATION TEST ===== */
+
+header {
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+  background: #fff;
+}
+
+header .container {
+  max-width: 100%;
+  padding: 0 40px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 80px;
+}
+
+header .logo {
+  flex: 0 0 auto;
+}
+
+header .nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
