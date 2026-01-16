@@ -1,206 +1,812 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Contact | Globally Secure IT</title>
-
-  <meta name="description"
-        content="Contact Globally Secure IT to discuss cybersecurity strategy, vCISO advisory, risk management, and security leadership.">
-
-  <!-- Canonical -->
-  <link rel="canonical" href="https://globallysecureit.com/contact/">
-
-  <!-- OpenGraph / LinkedIn -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Globally Secure IT">
-  <meta property="og:title" content="Contact Globally Secure IT">
-  <meta property="og:description" content="Start a conversation with Globally Secure IT about cybersecurity strategy, vCISO advisory, and executive security leadership.">
-  <meta property="og:url" content="https://globallysecureit.com/contact/">
-  <meta property="og:image" content="https://globallysecureit.com/assets/images/og-globallysecureit.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-
-  <!-- Favicons -->
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="/css/main.css">
-</head>
-
-<body>
-
-<header>
-  <div class="container">
-    <nav>
-      <div class="logo">
-        <img
-         src="/assets/images/logo.png"
-         alt="Globally Secure IT"
-         width="1170"
-         height="128"
-         loading="lazy"
-         decoding="async">
-      </div>
-
-        </a>
-      </div>
-
-      <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/services/">Services</a></li>
-        <li><a href="/industries/">Industries</a></li>
-        <li><a href="/insights/">Insights</a></li>
-        <li><a href="/contact/">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<main>
-
-<section class="hero">
-  <div class="container">
-    <h1>Let’s Talk</h1>
-    <p class="tagline">
-      Start a conversation about your security strategy
-    </p>
-  </div>
-</section>
-
-<section class="contact-section">
-  <div class="container contact-grid">
-
-    <div class="contact-info contact-info-light">
-      <h2>Get in Touch</h2>
-
-      <p>
-        Whether you’re evaluating your security posture, planning a transformation,
-        or need executive-level guidance, we’re happy to talk.
-      </p>
-
-      <div class="contact-item">
-        <strong>Phone</strong><br>
-        <a href="tel:516-946-1802">516-946-1802</a>
-      </div>
-
-      <div class="contact-item">
-        <strong>Email</strong><br>
-        <a href="mailto:fred@globallysecureit.com">fred@globallysecureit.com</a>
-      </div>
-
-      <div class="contact-item">
-        <strong>LinkedIn</strong><br>
-        <a href="https://www.linkedin.com/company/globally-secure-it/"
-           target="_blank" rel="noopener">
-          Globally Secure IT
-        </a>
-      </div>
-    </div>
-
-    <div class="contact-form">
-      <h2>Send a Message</h2>
-
-      <form id="contactForm"
-            action="https://formspree.io/f/meeeoejo"
-            method="POST">
-
-        <label>
-          Name
-          <input type="text" name="name" required>
-        </label>
-
-        <label>
-          Email
-          <input type="email" name="email" required>
-        </label>
-
-        <label>
-          Message
-          <textarea name="message" required></textarea>
-        </label>
-
-        <!-- Honeypot -->
-        <input type="text" name="_gotcha" style="display:none">
-
-        <!-- Optional -->
-        <input type="hidden" name="_subject" value="GlobalSecureIT Contact">
-        <input type="hidden" name="_template" value="table">
-
-        <button type="submit" id="submitBtn">Send</button>
-      </form>
-
-      <!-- Inline status message -->
-      <p id="formStatus" style="display:none; margin-top:1rem;"></p>
-
-    </div>
-
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <div class="container">
-    <p>&copy; <span id="year"></span> Globally Secure IT, LLC. All rights reserved.</p>
-  </div>
-</footer>
-
-<script>
-  // Footer year
-  document.getElementById("year").textContent = new Date().getFullYear();
-
-  // Formspree AJAX submit with UX tweaks
-  const form = document.getElementById('contactForm');
-  const submitBtn = document.getElementById('submitBtn');
-  const statusMsg = document.getElementById('formStatus');
-
-  if (form) {
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault();
-
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending…';
-
-      const formData = new FormData(form);
-
-      try {
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
-
-        if (response.ok) {
-          statusMsg.style.display = 'block';
-          statusMsg.textContent = 'Thank you — your message has been sent.';
-          statusMsg.style.color = 'green';
-
-          // Small pause, then go home
-          setTimeout(() => {
-            window.location.href = '/';
-          }, 1500);
-        } else {
-          throw new Error('Submission failed');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Globally Secure IT - CISO & Strategic Security Leadership</title>
+    <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+        
+        body {
+            font-family: 'Avenir Next', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: #ffffff;
+            color: #1e3a5f;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0;
+        }
+        
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            color: #1e3a5f;
+            text-decoration: none;
+            transition: opacity 0.3s;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        .hero {
+            background: #1e3a5f;
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(30, 58, 95, 0.95) 0%, rgba(20, 40, 70, 0.98) 100%);
+            z-index: 0;
+        }
+        
+        .hero .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background: #f59e0b;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #1e3a5f;
+        }
+        
+        section {
+            padding: 5rem 0;
+        }
+        
+        #about {
+            background: #ffffff;
+        }
+        
+        #expertise {
+            background: #f8fafc;
+        }
+        
+        #services {
+            background: #ffffff;
+        }
+        
+        #industries {
+            background: #f8fafc;
+        }
+        
+        #insights {
+            background: #ffffff;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1e3a5f;
+            text-align: center;
+            font-weight: 700;
+        }
+        
+        .section-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            font-size: 1.1rem;
+            color: #334155;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            color: #1e3a5f;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #f59e0b;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .service-card h3 {
+            color: #1e3a5f;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .service-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .service-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .service-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #f59e0b;
+            font-weight: bold;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #1e3a5f;
+            display: block;
+        }
+        
+        .stat-label {
+            color: #334155;
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+        
+        .leadership {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 3rem;
+            align-items: center;
+            max-width: 900px;
+            margin: 3rem auto 0;
+        }
+        
+        .leadership-photo {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .leadership-bio h3 {
+            color: #1e3a5f;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .leadership-bio .title {
+            color: #f59e0b;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .partners-section {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 2px solid #e2e8f0;
+        }
+        
+        .partners-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .partner-logo {
+            height: 60px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        
+        .partner-logo:hover {
+            opacity: 1;
+        }
+        
+        .industries {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .industry-tag {
+            background: #1e3a5f;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.95rem;
+        }
+        
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .insight-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid #f59e0b;
+        }
+        
+        .insight-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .insight-card h3 {
+            color: #1e3a5f;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .insight-card p {
+            color: #334155;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .insight-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #f59e0b;
+            text-decoration: none;
+            font-weight: 600;
+            transition: gap 0.3s;
+        }
+        
+        .insight-link:hover {
+            gap: 0.75rem;
+        }
+        
+        .contact-section {
+            background: #1e3a5f;
+            color: white;
+            text-align: center;
+            padding: 5rem 0;
+        }
+        
+        .contact-section h2 {
+            color: white;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-item span {
+            font-size: 1.5rem;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            background: #1a202c;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .leadership {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .leadership-photo {
+                max-width: 300px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="logo.png" alt="Globally Secure IT">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#expertise">Expertise</a></li>
+                    <li><a href="#industries">Industries</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-      } catch (error) {
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send';
+    <section class="hero">
+        <div class="container">
+            <h1>CISO & Strategic Security Leadership</h1>
+            <p class="tagline">Turning Risk into Advantage</p>
+            <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto;">
+                Transforming cybersecurity from a cost center into a competitive advantage since 2012
+            </p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Schedule Consultation</a>
+                <a href="#services" class="btn btn-secondary">Explore Services</a>
+            </div>
+        </div>
+    </section>
 
-        statusMsg.style.display = 'block';
-        statusMsg.textContent = 'There was a problem sending your message. Please try again.';
-        statusMsg.style.color = 'red';
-      }
-    });
-  }
-</script>
+    <section id="about">
+        <div class="container">
+            <h2>Why Choose Globally Secure IT?</h2>
+            <p class="section-intro">
+                Globally Secure IT delivers strategic CISO advisory and cybersecurity leadership that transforms risk into competitive advantage. With 30+ years of experience across Fortune 500 companies, global enterprises, and federal agencies, we align technology initiatives with business objectives to drive measurable results.
+            </p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Proven Financial Impact</h3>
+                    <p>We translate security investments into tangible business value, with a track record of delivering millions in savings through strategic IT optimization, tool rationalization, and quantifiable risk reduction ($830K reduction in breach risk for one client).</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Strategic, Not Just Tactical</h3>
+                    <p>We speak the language of the C-suite, translating complex security challenges into clear business cases, actionable roadmaps, and measurable ROI.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Deep Expertise</h3>
+                    <p>30+ years of cybersecurity and IT leadership spanning Fortune 500 companies, global enterprises, and federal agencies.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚖️</div>
+                    <h3>Comprehensive Compliance</h3>
+                    <p>Navigate complex regulatory landscapes with confidence. Our solutions operationalize key frameworks including NIST, ISO 27001, COBIT, HIPAA/HITRUST, ensuring rigorous governance and audit-readiness.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🛠️</div>
+                    <h3>Architectural Excellence</h3>
+                    <p>We don't just advise; we architect and build robust, scalable security solutions from the ground up, specializing in hybrid cloud, zero-trust frameworks, and secure infrastructure design.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>AI-Driven Innovation</h3>
+                    <p>Stay ahead with AI-enhanced threat detection, automated security operations, and ML-based risk analytics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="expertise">
+        <div class="container">
+            <h2>Proven Results</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <span class="stat-number">30+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">$1.5M+</span>
+                    <span class="stat-label">Client Savings Delivered</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">$830K</span>
+                    <span class="stat-label">Breach Risk Reduction</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">$30M</span>
+                    <span class="stat-label">Federal Budget Managed</span>
+                </div>
+            </div>
+            
+            <div class="leadership">
+                <img src="headshot.jpg" alt="Fred Hazan" class="leadership-photo">
+                <div class="leadership-bio">
+                    <h3>Fred Hazan</h3>
+                    <div class="title">Founder & Principal Consultant</div>
+                    <p>Fred brings extensive executive leadership experience in cybersecurity and IT across Fortune 500 corporations, global enterprises, and federal agencies, with deep expertise in Identity and Access Management (IAM), Zero Trust architecture, cloud security, and AI-enhanced defense strategies.</p>
+                    <p style="margin-top: 1rem;">As a seasoned CISO and trusted C-suite advisor, Fred has established a successful CISO Advisory practice, architected hybrid cloud solutions for global pharmaceutical organizations, and optimized complex security portfolios to elevate organizational maturity. He excels at translating intricate security strategies into measurable business impact, with expertise spanning AI-enhanced security, secure architectural design, SDLC integration, incident response, and enterprise risk management.</p>
+                </div>
+            </div>
+            
+            <div class="partners-section">
+                <h3 style="color: #1e3a5f; font-size: 1.5rem; margin-bottom: 1rem;">Cybersecurity Advisor and Trusted Partner</h3>
+                <p style="color: #334155; margin-bottom: 1.5rem;">Proudly partnering with:</p>
+                <div class="partners-logos">
+                    <a href="https://www.tpgconsulting.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="tpg-logo.png" alt="TPG Consulting" class="partner-logo">
+                    </a>
+                    <a href="https://www.silversky.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="silversky-logo.png" alt="SilverSky" class="partner-logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Core Services</h2>
+            <p class="section-intro">
+                Comprehensive cybersecurity solutions aligned with business objectives that deliver measurable results
+            </p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Cybersecurity Strategy & Governance</h3>
+                    <ul>
+                        <li>vCISO Advisory & Leadership</li>
+                        <li>Security Program Creation & Optimization</li>
+                        <li>Security Tool Rationalization</li>
+                        <li>Technology Roadmap Development</li>
+                        <li>M&A Security Due Diligence</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Enterprise Risk Management</h3>
+                    <ul>
+                        <li>Framework Implementation (NIST, ISO 27001, HIPAA)</li>
+                        <li>Cybersecurity Risk Assessment</li>
+                        <li>Third-Party Risk Assessment (TPRA)</li>
+                        <li>Vendor Security Evaluation</li>
+                        <li>Supply Chain Risk Management</li>
+                        <li>Risk Prioritization & Reporting</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Identity & Access Management</h3>
+                    <ul>
+                        <li>IAM Strategy & Roadmap</li>
+                        <li>Identity Governance & Administration (IGA)</li>
+                        <li>Privileged Access Management (PAM)</li>
+                        <li>Multi-Factor Authentication (MFA)</li>
+                        <li>Single Sign-On (SSO)</li>
+                        <li>Frictionless Authentication</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>IT, Cloud & Network Security</h3>
+                    <ul>
+                        <li>IT & Cloud Security Validation</li>
+                        <li>Cloud Security Architecture</li>
+                        <li>Network Security Design</li>
+                        <li>Infrastructure Optimization</li>
+                        <li>Cost Optimization</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Advanced Cyber Defense</h3>
+                    <ul>
+                        <li>Threat Analytics & SIEM Optimization</li>
+                        <li>Incident Response Planning</li>
+                        <li>Business Impact Analysis</li>
+                        <li>Ransomware Defense Strategies</li>
+                        <li>Security Operations Enhancement</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>AI-Driven Security Innovation</h3>
+                    <ul>
+                        <li>Secure AI Integration Strategies</li>
+                        <li>AI Security Accelerators</li>
+                        <li>AI-Enhanced Threat Detection</li>
+                        <li>Automated Security Operations</li>
+                        <li>AI Governance & Risk Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="industries">
+        <div class="container">
+            <h2>Industries We Serve</h2>
+            <p class="section-intro">
+                Trusted by organizations across diverse sectors with specialized compliance 
+                and security requirements
+            </p>
+            <div class="industries">
+                <span class="industry-tag">Financial Services & Banking</span>
+                <span class="industry-tag">Healthcare & Pharmaceuticals</span>
+                <span class="industry-tag">Government & Public Sector</span>
+                <span class="industry-tag">Technology & Software</span>
+                <span class="industry-tag">Manufacturing & Aerospace</span>
+                <span class="industry-tag">Energy & Utilities</span>
+                <span class="industry-tag">Professional Services</span>
+                <span class="industry-tag">Non-Profit Organizations</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="insights">
+        <div class="container">
+            <h2>Insights & Thought Leadership</h2>
+            <p class="section-intro">
+                Explore perspectives on cybersecurity strategy, SOC operations, and security transformation
+            </p>
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <h3>How AI Just Rewired the CISO's Role</h3>
+                    <p>AI is shifting the CISO from gatekeeper to trust builder. The leaders moving fastest pair AI-driven detection and governance with human judgment and accountability—because that's how trust is earned and kept.</p>
+                    <a href="https://www.linkedin.com/posts/fredhazan_ai-is-shifting-the-ciso-from-gatekeeper-to-activity-7396958079306858497-BkEj?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJPh-EBQ304YR2bY8WqO5pKzAmWoU5Kw18" target="_blank" class="insight-link">
+                        Read on LinkedIn →
+                    </a>
+                </div>
+                
+                <div class="insight-card">
+                    <h3>Security Without Compromise: The Flexible SOC Evolution</h3>
+                    <p>Security shouldn't lock you in—it should move with you. Choose a SOC model that amplifies your tools, accelerates response, and adapts as your business evolves.</p>
+                    <a href="https://www.linkedin.com/posts/fredhazan_security-shouldnt-lock-you-init-should-activity-7401752430444437504-pT6o?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJPh-EBQ304YR2bY8WqO5pKzAmWoU5Kw18" target="_blank" class="insight-link">
+                        Read on LinkedIn →
+                    </a>
+                </div>
+                
+                <div class="insight-card">
+                    <h3>The Identity Paradox: Why Your Greatest Security Asset Is Also Your Biggest Vulnerability</h3>
+                    <p>Credentials are the new crown jewels—and attackers know it. With AI-driven phishing, ghost accounts, and deepfake social engineering on the rise, identity has become the ultimate battleground in cybersecurity.</p>
+                    <a href="https://www.linkedin.com/posts/fredhazan_credentials-are-the-new-crown-jewelsand-activity-7399138190772604929-DTJQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJPh-EBQ304YR2bY8WqO5pKzAmWoU5Kw18" target="_blank" class="insight-link">
+                        Read on LinkedIn →
+                    </a>
+                </div>
+                
+                <div class="insight-card">
+                    <h3>Continuous Risk Management: Why CISOs Need AI Augmentation (With Guardrails)</h3>
+                    <p>AI augments CISOs by automating continuous risk monitoring, compliance evidence, and threat detection—freeing humans to focus on strategy, judgment, and governance. But to succeed, CISOs must apply strict AI guardrails for data privacy, model validation, and oversight to ensure secure, explainable, and compliant risk management.</p>
+                    <a href="https://www.linkedin.com/posts/fredhazan_ai-augments-cisos-by-automating-continuous-activity-7394412272531431424-pV_m?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJPh-EBQ304YR2bY8WqO5pKzAmWoU5Kw18" target="_blank" class="insight-link">
+                        Read on LinkedIn →
+                    </a>
+                </div>
+                
+                <div class="insight-card">
+                    <h3>Your Security Stack is Costing You More Than Money</h3>
+                    <p>Appliance-based security models can hold back businesses, pulling skilled professionals away from strategic work to manage infrastructure tasks. Embracing a modern, cloud-delivered security approach that integrates functions into a single service can pave the way for Zero Trust, bringing cost savings, quicker deployments, and enhanced business flexibility.</p>
+                    <a href="https://www.linkedin.com/posts/fredhazan_security-cloudsecurity-zerotrust-activity-7394037605580869632-mgIH?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJPh-EBQ304YR2bY8WqO5pKzAmWoU5Kw18" target="_blank" class="insight-link">
+                        Read on LinkedIn →
+                    </a>
+                </div>
+                
+                <div class="insight-card">
+                    <h3>The One Data Security Decision That Matters Most</h3>
+                    <p>If you could only fix ONE thing on your data security roadmap this year, what would it be?</p>
+                    <a href="https://www.linkedin.com/posts/fredhazan_datasecurity-datagovernance-cybersecurity-activity-7393396680588668929-sZLv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJPh-EBQ304YR2bY8WqO5pKzAmWoU5Kw18" target="_blank" class="insight-link">
+                        Read on LinkedIn →
+                    </a>
+                </div>
+
+ <div class="insight-card">
+                    <h3>Third‑Party Risk in the AI Era: Your Supply Chain Is Now Your Most Dangerous Attack Surface</h3>
+                    <p>Your supply chain is now your biggest attack surface—and AI just made it exponential.</p>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7406811441800060929" target="_blank" class="insight-link">
+                        Read on LinkedIn →
+                    </a>
+                </div>
+                
+                <div class="insight-card">
+                    <h3>Why Microsoft Copilot Is Exposing Your Identity Governance Gaps</h3>
+                    <p>You cannot secure what you don't understand. And most organizations don't truly understand their permission sprawl until Copilot forces them to confront it.</p>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7406788987480133635" target="_blank" class="insight-link">
+                        Read on LinkedIn →
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>Ready to Transform Your Security Strategy?</h2>
+            <p style="font-size: 1.2rem; margin-top: 1rem;">
+                Let's connect and explore how Globally Secure IT can help you achieve your vision
+            </p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📞</span>
+                    <a href="tel:516-946-1802">516-946-1802</a>
+                </div>
+                <div class="contact-item">
+                    <span>📬</span>
+                    <a href="mailto:fred@globallysecureit.com">fred@globallysecureit.com</a>
+                </div>
+                <div class="contact-item">
+                    <span>💼</span>
+                    <a href="https://www.linkedin.com/company/globally-secure-it/" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Globally Secure IT, LLC. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                Transforming Risk into Competitive Advantage Since 2012
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Automatically update copyright year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
