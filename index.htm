@@ -209,23 +209,28 @@
 <body>
     <header>
         <nav class="container">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
             <div class="logo">
                 <a href="/">
                     <img src="/assets/images/logo.png" alt="Globally Secure IT" loading="eager" decoding="sync" width="200" height="50">
                 </a>
             </div>
             <ul class="nav-links">
-                 <li><a href="/">Home</a></li>
-                 <li><a href="/#about">Why Us</a></li>
-                 <li><a href="/services/">Services</a></li>
-                 <li><a href="/#results">Results</a></li>
-                 <li><a href="/industries/">Industries</a></li>
-                 <li><a href="/insights/">Insights</a></li>
-                 <li><a href="/contact/">Contact</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/#about">Why Us</a></li>
+                <li><a href="/services/">Services</a></li>
+                <li><a href="/#results">Results</a></li>
+                <li><a href="/industries/">Industries</a></li>
+                <li><a href="/insights/">Insights</a></li>
+                <li><a href="/contact/">Contact</a></li>
             </ul>
-        </nav>
-    </header>
-    <main>
+         </nav>
+     </header>    
+ <main>
         <!-- HERO -->
         <section class="hero">
             <div class="container">
@@ -413,6 +418,22 @@
     <script>
   document.getElementById("year").textContent = new Date().getFullYear();
     </script>
+// Mobile Menu Toggle
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+
+if (mobileMenu) {
+  mobileMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // Close menu when a link is clicked
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
+}
 </body>
 </html>
 
