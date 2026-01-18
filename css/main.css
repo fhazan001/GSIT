@@ -142,7 +142,7 @@ nav {
      color: white;
 }
 
-.intro {
+.intro-section {
     background: #1e4a7a;
     color: white;
     padding: 6rem 0;
@@ -150,7 +150,7 @@ nav {
     position: relative;
 }
 
-.about {
+.results-section {
     background #f8fafc;
 }
 
