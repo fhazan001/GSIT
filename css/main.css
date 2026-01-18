@@ -138,6 +138,10 @@ nav {
      padding: 5rem 0;
 }
 
+.cta-section h2 {
+     color: white;
+}
+
 #intro {
     background: #1e4a7a;
     color: white;
