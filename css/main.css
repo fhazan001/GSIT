@@ -354,6 +354,17 @@ h2 {
     border-top: 2px solid #e2e8f0;
 }
 
+.partners-heading {
+    color: #1e3a5f;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.partners-intro {
+    color: #334155;
+    margin-bottom: 1.5rem;
+}
+
 .partners-logos {
     display: flex;
     justify-content: center;
@@ -372,6 +383,11 @@ h2 {
 
 .partner-logo:hover {
     opacity: 1;
+}
+
+.footer-tagline {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
 }
 /* ========================================================= 
    INDUSTRIES SECTION
