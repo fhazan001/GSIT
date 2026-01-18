@@ -512,6 +512,11 @@ a.insight-card-link:hover * {
     padding: 5rem 0;
 }
 
+.cta-section {
+     background: rgb(30, 74, 122);
+     color: white;
+}
+
     .contact-section h2 {
         color: white;
     }
