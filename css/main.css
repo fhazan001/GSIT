@@ -131,7 +131,7 @@ nav {
 /* ========================================================= 
    BUTTONS & CTA
 ========================================================= */
-#cta {
+.cta-section {
     background: #1e4a7a;
     color: white;
 }
@@ -144,7 +144,7 @@ nav {
     position: relative;
 }
 
-.cta-buttons {
+.hero-buttons {
     display: flex;
     gap: 1rem;
     justify-content: center;
@@ -475,13 +475,13 @@ h2 {
         flex-grow: 1;
     }
 
-.insight-cta {
+.card-read-link {
     color: #f59e0b;
     font-weight: 600;
     margin-top: 0.5rem;
 }
 
-.insight-card-link:hover .insight-cta {
+.insight-card-link:hover .card-read-link {
     text-decoration: underline;
 }
 
@@ -499,7 +499,7 @@ a.insight-card-link:hover * {
     text-decoration: none !important;
 }
 
-    a.insight-card-link:hover .insight-cta {
+    a.insight-card-link:hover .card-read-link {
         text-decoration: underline !important;
     }
 /* ========================================================= 
