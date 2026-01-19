@@ -65,12 +65,15 @@ nav {
     align-items: center;
     gap: 0;
     z-index: 1001;
+    flex-shrink: 0; /* prevents logo from being squeezed */
 }
 
-    .logo img {
-        height: 50px;
-        width: auto;
-    }
+.logo img {
+    height: 50px;
+    width: auto;
+    flex-shrink: 0; /* prevents image from being squeezed */
+    object-fit: contain; /* ensures aspect ratio is maintained */
+}
 
 .nav-links {
     display: flex;
