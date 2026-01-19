@@ -497,7 +497,7 @@ h2 {
         cursor: pointer;
     }
 
-    .insight-card h3 {
+    .insight-card h2 {         /*FH changed to h2 as this is now the level */
         color: #1e3a5f;
         font-size: 1.4rem;
         margin-bottom: 1rem;
