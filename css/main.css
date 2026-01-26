@@ -286,6 +286,12 @@ h2 {
         font-weight: 600;
     }
 
+    .service-card h4 {
+        color: #1e3a5f;
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+
     .service-card ul {
         list-style: none;
         padding-left: 0;
