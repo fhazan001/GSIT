@@ -285,8 +285,12 @@ h2 {
     border-radius: 10px;
     border-left: 4px solid #f59e0b;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: relative; 
+    transition: transform 0.2s;
 }
-
+.service-card:active {
+  transform: translateY(4px); /* Moves the card when clicked */
+}
     .service-card h3 {
         color: #1e3a5f;
         margin-bottom: 1rem;
@@ -326,7 +330,16 @@ h2 {
     color: inherit;
     text-decoration: none;
 }
-
+.service-card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Places the link on top of other content */
+  text-decoration: none; /* Removes any default underlines */
+  outline: none; /* Removes focus border (optional, use for aesthetics) */
+}
     .services-card-link * {
         text-decoration: none;
     }
@@ -334,10 +347,6 @@ h2 {
     .services-card-link p {
         flex-grow: 1;
     }
-
-
-
-
 
 .service-section-a {
     background: #f8fafc;
@@ -347,6 +356,11 @@ h2 {
     font-size: 2rem;
  }
 
+/* Ensure the text stays readable and is not accidentally underlined */
+.service-card h3, 
+.service-card li {
+  text-decoration: none !important;
+}
 .service-section-b {
     background: white;
 }
