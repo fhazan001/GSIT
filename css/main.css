@@ -272,6 +272,13 @@ h2 {
     margin-top: 3rem;
 }
 
+.services-grid2 {
+    display: grid;
+    grid-template-columns: 1fr; 
+    row-gap: 2rem; 
+    margin-top: 3rem;
+}
+
 .service-card {
     background: white;
     padding: 2rem;
