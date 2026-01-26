@@ -174,16 +174,6 @@ nav {
 
 .results-section {
     background: #f8fafc;
-    text-align: center;
-    position: relative;
-
-}
-
-.about-section {
-    background: white;
-    text-align: center;
-    position: relative;
-
 }
 
 .hero-buttons {
@@ -238,13 +228,6 @@ h2 {
     color: #334155;
 }
 
-.section-intro2 {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 3rem;
-    font-size: 1.1rem;
-    color: #334155;
-}
 /* ========================================================= 
    FEATURE CARDS
 ========================================================= */
@@ -321,6 +304,16 @@ h2 {
             color: #f59e0b;
             font-weight: bold;
         }
+
+.service-section-a {
+    background: #f8fafc;
+    text-align: center;
+}
+
+.service-section-b {
+    background: white;
+    text-align: center;
+}
 /* ========================================================= 
    STATISTICS CARDS
 ========================================================= */
