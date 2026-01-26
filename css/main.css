@@ -297,7 +297,7 @@ h2 {
         color: #1e3a5f;
         margin-bottom: 1rem;
         font-weight: 600;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     .service-card ul {
@@ -323,7 +323,7 @@ h2 {
     background: #f8fafc;
  }
 
-.service-section-a h4 {
+.service-section-a h3 {
     font-size: 2rem;
  }
 
@@ -331,7 +331,7 @@ h2 {
     background: white;
 }
 
-.service-section-b h4 {
+.service-section-b h3 {
     font-size: 2rem;
  }
 
