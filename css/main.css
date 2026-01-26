@@ -174,10 +174,16 @@ nav {
 
 .results-section {
     background: #f8fafc;
+    text-align: center;
+    position: relative;
+
 }
 
 .about-section {
     background: white;
+    text-align: center;
+    position: relative;
+
 }
 
 .hero-buttons {
