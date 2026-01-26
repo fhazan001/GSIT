@@ -313,13 +313,18 @@ h2 {
 
 .service-section-a {
     background: #f8fafc;
-    text-align: center;
-}
+ }
 
 .service-section-b {
     background: white;
-    text-align: center;
 }
+
+.section-intro2 {
+     padding: 0.5rem 0;
+     padding-left: 1.5rem;
+     position: relative;
+}
+
 /* ========================================================= 
    STATISTICS CARDS
 ========================================================= */
