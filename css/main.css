@@ -386,82 +386,28 @@ h2 {
 /* ========================================================= 
    FRAMEWORKS TABLE STYLES
    ========================================================= */
-/* Table Wrapper for Responsive Scrolling */
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  margin: 2rem 0;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  max-width: none; /* Remove any max-width constraints */
-}
 
-/* Make table span full width */
-.section-intro2 .table-wrapper {
-  margin-left: -1.5rem;
-  width: calc(100% + 1.5rem);
+/* Global Table Borders and Centering */
+.frameworks-table,
+.frameworks-table th,
+.frameworks-table td {
+  border: 1px solid #ddd;
 }
 
 .frameworks-table {
-  width: 100%;
   border-collapse: collapse;
-  background: white;
-  font-size: 0.95rem;
-  min-width: 100%; /* Ensure table uses full width */
+  /* Centering the table if its width is less than 100% */
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.frameworks-table thead {
-  background: #1e3a5f;
-  color: white;
+/* Centering the container (modern flexbox approach) */
+.table-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
-.frameworks-table th {
-  padding: 1rem;
-  text-align: left;
-  font-weight: 600;
-  border: 1px solid #cbd5e1;
-  background: #1e3a5f;
-}
-
-.frameworks-table td {
-  padding: 0.875rem 1rem;
-  border: 1px solid #cbd5e1;
-  vertical-align: top;
-  line-height: 1.6;
-}
-
-.frameworks-table tbody tr:hover {
-  background-color: #f8fafc;
-}
-
-/* Category Column Styling */
-.frameworks-table td:first-child {
-  font-weight: 600;
-  color: #1e3a5f;
-  background-color: #f1f5f9;
-}
-
-/* Subcategory Column */
-.frameworks-table td:nth-child(2) {
-  color: #334155;
-}
-
-/* Framework Column */
-.frameworks-table td:last-child {
-  color: #1e293b;
-  font-weight: 500;
-}
-
-/* Alternating Row Colors for Better Readability */
-.frameworks-table tbody tr:nth-child(even) {
-  background-color: #fafbfc;
-}
-
-.frameworks-table tbody tr:nth-child(even):hover {
-  background-color: #f1f5f9;
-}
-
-/* Responsive Design */
+/* Responsive Design Overrides */
 @media (max-width: 768px) {
   .frameworks-table {
     font-size: 0.85rem;
@@ -473,29 +419,17 @@ h2 {
   }
   
   .table-wrapper {
-    margin: 1rem -1rem;
+    /* These styles ensure behavior on mobile matches the global styles */
+    display: flex;
     border-radius: 0;
-  }
-}
-
-/* Print Styles */
-@media print {
-  .frameworks-table {
-    font-size: 10pt;
-  }
-  
-  .frameworks-table td:first-child {
-    background-color: #e9ecef !important;
-  }
-  
-  .frameworks-table tbody tr:hover {
-    background-color: transparent;
+    justify-content: center; 
   }
 }
 
 /* ========================================================= 
    STATISTICS CARDS
 ========================================================= */
+
 .stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
