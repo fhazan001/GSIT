@@ -946,6 +946,16 @@ a.insight-card-link:hover * {
         order: 0;
     }
 
+    .logo img {
+        height: 50px; /* Keeps the required fixed height */
+        width: auto; /* Overrides the HTML attribute to allow scaling */
+        max-width: 100%; /* Ensures it never overflows its container */
+       /* Other properties you already have: */
+        display: block;
+        flex-shrink: 0; 
+        object-fit: contain;
+     }
+
     .nav-links {
         position: fixed;
         left: -100%;
