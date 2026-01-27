@@ -265,6 +265,9 @@
           <textarea id="message" name="message" rows="6" required></textarea>
         </div>
 
+        <!-- Hidden field to capture the context -->
+        <input type="hidden" id="contextField" name="Context" value="">
+        <input type="hidden" id="pageField" name="Page" value="">
         <!-- Honeypot -->
         <input type="text" name="_gotcha" style="display:none">
 
@@ -303,6 +306,23 @@
 </footer>
 
 <script>
+  // 1. AUTO-POPULATE PAGE AND CONTEXT
+  (function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    // Check for 'Page' param, fallback to 'General' if missing
+    const pageInput = document.getElementById('pageField');
+    if (pageInput) {
+      pageInput.value = urlParams.get('Page') || "General";
+    }
+
+    // Check for 'Context' param, fallback to 'General' if missing
+    const contextInput = document.getElementById('contextField');
+    if (contextInput) {
+      contextInput.value = urlParams.get('Context') || "General";
+    }
+  })();
+
   // Footer year
   document.getElementById("year").textContent = new Date().getFullYear();
 
