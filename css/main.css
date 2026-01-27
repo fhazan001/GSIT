@@ -391,7 +391,7 @@ h2 {
   width: calc(100% + 4rem);
   margin: 2rem -2rem;
   overflow-x: auto;
-  border-radius: 0;
+  border-radius: 1;
   box-shadow: none;
   border-top: 1px solid #e2e8f0;
 }
