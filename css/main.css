@@ -396,11 +396,12 @@ h2 {
   max-width: none; /* Remove any max-width constraints */
 }
 
+/* Make table span full width */
 .section-intro2 .table-wrapper {
   margin-left: -1.5rem;
-  margin-right: 0;
   width: calc(100% + 1.5rem);
 }
+
 .frameworks-table {
   width: 100%;
   border-collapse: collapse;
