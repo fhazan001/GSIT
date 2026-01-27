@@ -373,6 +373,107 @@ h2 {
      padding-left: 1.5rem;
      position: relative;
 }
+/* ========================================================= 
+   FRAMEWORKS TABLE STYLES
+   ========================================================= */
+/* Table Wrapper for Responsive Scrolling */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 2rem 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Table Styles */
+.frameworks-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  font-size: 0.95rem;
+}
+
+.frameworks-table thead {
+  background: #1e3a5f;
+  color: white;
+}
+
+.frameworks-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #142846;
+}
+
+.frameworks-table td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.frameworks-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* Category Column Styling */
+.frameworks-table td:first-child {
+  font-weight: 600;
+  color: #1e3a5f;
+  background-color: #f1f5f9;
+}
+
+/* Subcategory Column */
+.frameworks-table td:nth-child(2) {
+  color: #334155;
+}
+
+/* Framework Column */
+.frameworks-table td:last-child {
+  color: #1e293b;
+  font-weight: 500;
+}
+
+/* Alternating Row Colors for Better Readability */
+.frameworks-table tbody tr:nth-child(even) {
+  background-color: #fafbfc;
+}
+
+.frameworks-table tbody tr:nth-child(even):hover {
+  background-color: #f1f5f9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .frameworks-table {
+    font-size: 0.85rem;
+  }
+  
+  .frameworks-table th,
+  .frameworks-table td {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .table-wrapper {
+    margin: 1rem -1rem;
+    border-radius: 0;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .frameworks-table {
+    font-size: 10pt;
+  }
+  
+  .frameworks-table td:first-child {
+    background-color: #e9ecef !important;
+  }
+  
+  .frameworks-table tbody tr:hover {
+    background-color: transparent;
+  }
+}
 
 /* ========================================================= 
    STATISTICS CARDS
