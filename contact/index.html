@@ -393,17 +393,19 @@
 
         if (response.ok) {
           statusMsg.style.display = 'block';
-          statusMsg.textContent = 'Thank you — your message has been sent successfully!';
+          statusMsg.textContent = 'Thank you — your message has been sent successfully!  We will be in touch shortly';
           statusMsg.classList.add('success');
           statusMsg.classList.remove('error');
 
           // Reset form
           form.reset();
 
+          form.style.display = 'none';
+
           // Small pause, then go home
           setTimeout(() => {
             window.location.href = '/';
-          }, 2000);
+          }, 5000);
         } else {
           throw new Error('Submission failed');
         }
