@@ -400,9 +400,20 @@ h2 {
 }
 
 /* Override when inside section-intro2 */
+/* Table Wrapper - center within service-card */
+.table-wrapper {
+  width: 100%;
+  margin: 1rem 0;
+  overflow-x: auto;
+  border-radius: 0;
+  box-shadow: none;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Remove left padding from section-intro2 so table is centered */
 .section-intro2 .table-wrapper {
-  margin-left: -2rem;
-  width: calc(100% + 4rem);
+  margin-left: 0rem;
+  width: 100%;
 }
 .frameworks-table {
   width: 100%;
