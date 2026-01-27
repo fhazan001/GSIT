@@ -66,6 +66,7 @@ nav {
     gap: 0;
     z-index: 1001;
     flex-shrink: 0; /* prevents logo from being squeezed */
+    min-width: 0; /* Ensures the flex item can shrink */
 }
 
 .logo img {
@@ -73,6 +74,7 @@ nav {
     width: auto;
     flex-shrink: 0; /* prevents image from being squeezed */
     object-fit: contain; /* ensures aspect ratio is maintained */
+    max-width: 100%; 
 }
 
 .nav-links {
