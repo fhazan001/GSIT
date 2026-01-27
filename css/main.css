@@ -388,20 +388,22 @@ h2 {
    ========================================================= */
 /* Table Wrapper for Responsive Scrolling */
 .table-wrapper {
-  width: 100%;
+  width: calc(100% + 4rem);
+  margin-left: -2rem;
+  margin-right: -2rem;
+  margin-top: 2rem;
+  margin-bottom: -2rem;
   overflow-x: auto;
-  margin: 2rem 0;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  max-width: none; /* Remove any max-width constraints */
+  border-radius: 0;
+  box-shadow: none;
+  border-top: 1px solid #e2e8f0;
 }
 
-/* Make table span full width */
+/* Override when inside section-intro2 */
 .section-intro2 .table-wrapper {
-  margin-left: -1.5rem;
-  width: calc(100% + 1.5rem);
+  margin-left: -2rem;
+  width: calc(100% + 4rem);
 }
-
 .frameworks-table {
   width: 100%;
   border-collapse: collapse;
