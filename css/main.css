@@ -13,6 +13,10 @@ body {
     color: #1e293b;
 }
 
+html, body {
+  overflow-x: hidden; /* This can hide the horizontal scrollbar caused by the logo */
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -70,11 +74,11 @@ nav {
 }
 
 .logo img {
-    height: 50px;
-    width: auto;
+    height: 50px; !important;
+    width: auto; !important;
     flex-shrink: 0; /* prevents image from being squeezed */
     object-fit: contain; /* ensures aspect ratio is maintained */
-    max-width: 100%; 
+    max-width: 100%; !important;
 }
 
 .nav-links {
