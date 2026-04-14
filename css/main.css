@@ -77,8 +77,8 @@ nav {
     position: relative;
 }
 
+
 .logo {
-    content: var(--logo-src); /* <--- ADD THIS LINE */
     display: flex;
     align-items: center;
     gap: 0;
@@ -88,6 +88,7 @@ nav {
 }
 
 .logo img {
+    content: var(--logo-src); /* <--- ADD THIS LINE */
     height: 50px; !important;
     width: auto; !important;
     flex-shrink: 0; /* prevents image from being squeezed */
