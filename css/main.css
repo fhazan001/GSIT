@@ -495,7 +495,7 @@ h2 {
     margin-bottom: 1rem;
 }
 /* ========================================================= 
-   PARTNERS SECTION
+   PARTNERS SECTION 
 ========================================================= */
 .partners-section {
     padding: 4rem 0;
@@ -695,7 +695,7 @@ a.insight-card-link:hover * {
 }
 
 .cta-section {
-     background: rgb(30, 74, 122);
+     background: #1e4a7a;
      color: white;
 }
 
@@ -759,9 +759,9 @@ a.insight-card-link:hover * {
         color: #0f2a44;
         text-align: left;
     }
-
+/*  FHFH test   #1f3a5a;   */
     .contact-info-light p {
-        color: #1f3a5a;
+        color: #FF000A         
         margin-bottom: 2rem;
         line-height: 1.6;
     }
