@@ -1,13 +1,13 @@
 :root {
-  /* --- BRAND COLORS --- */
-  --brand-main: #0f192d;       /* Standard Midnight Blue */
-  --brand-accent: #f59e0b;     /* Standard Amber */
-  --logo-src: url('logo.svg'); /* Standard Logo */
+  /* --- STANDARD SCHEME --- */
+  --logo-src: url('/assets/images/logo.svg'); /* Match your HTML path */
+  --brand-main: #0f192d;
+  --brand-accent: #f59e0b;
 
-  /* --- ALTERNATE THEME (Uncomment to test) --- */
-  /* --brand-main: #333333;      /* Charcoal */
-  /* --brand-accent: #7bafd4;    /* Ice Blue */
-  /* --logo-src: url('logoC.svg'); /* Alternate Logo */
+  /* --- ALTERNATE SCHEME --- */
+  /* --logo-src: url('/assets/images/logoC.svg'); */
+  /* --brand-main: #333333; */
+  /* --brand-accent: #7bafd4; */
 }
 
 
