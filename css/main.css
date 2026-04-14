@@ -97,6 +97,7 @@ nav {
     }
 
         .nav-links a:hover {
+            background: #d97706;   /* FH  */
             opacity: 0.8;
         }
 
@@ -202,6 +203,7 @@ nav {
 }
 
     .btn:hover {
+        background: #d97706;   /* FH  */  
         transform: translateY(-2px);
         box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
@@ -253,6 +255,7 @@ h2 {
 }
 
     .feature-card:hover {
+        background: #d97706;   /* FH  */
         transform: translateY(-5px);
         box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     }
@@ -534,6 +537,7 @@ h2 {
 }
 
 .partner-logo:hover {
+    background: #d97706;   /* FH  */
     opacity: 1;
 }
 
@@ -623,6 +627,7 @@ h2 {
 }
 
     .insight-card:hover {
+        background: #d97706;   /* FH  */
         transform: translateY(-5px);
         box-shadow: 0 10px 20px rgba(0,0,0,0.15);
         cursor: pointer;
@@ -664,6 +669,7 @@ h2 {
 }
 
 .insight-card-link:hover .card-read-link {
+    background: #d97706;   /* FH  */
     text-decoration: underline;
 }
 
@@ -734,6 +740,7 @@ a.insight-card-link:hover * {
     }
 
         .contact-item a:hover {
+            background: #d97706;   /* FH  */
             text-decoration: underline;
         }
 /* ========================================================= 
