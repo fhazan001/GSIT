@@ -1,3 +1,16 @@
+:root {
+  /* --- BRAND COLORS --- */
+  --brand-main: #0f192d;       /* Standard Midnight Blue */
+  --brand-accent: #f59e0b;     /* Standard Amber */
+  --logo-src: url('logo.svg'); /* Standard Logo */
+
+  /* --- ALTERNATE THEME (Uncomment to test) --- */
+  /* --brand-main: #333333;      /* Charcoal */
+  /* --brand-accent: #7bafd4;    /* Ice Blue */
+  /* --logo-src: url('logoC.svg'); /* Alternate Logo */
+}
+
+
 /* ========================================================= 
    GLOBAL RESET & BASE STYLES
    ========================================================= */
@@ -10,7 +23,7 @@
 body {
     font-family: 'Avenir Next', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
-    color: #0f192d;
+    color: var(--brand-main);
 }
 
 img {
@@ -34,7 +47,7 @@ section {
 }
 
 footer {
-    background: #1a202c;
+    background: var(--brand-main);
     color: #ffffff;
     text-align: center;
     padding: 2rem 0;
@@ -49,7 +62,7 @@ header nav.container {
 
 header {
     background: #ffffff;
-    color: #0f192d;
+    color: var(--brand-main);
     padding: 1rem 0;
     position: sticky;
     top: 0;
@@ -65,6 +78,7 @@ nav {
 }
 
 .logo {
+    content: var(--logo-src); /* <--- ADD THIS LINE */
     display: flex;
     align-items: center;
     gap: 0;
@@ -90,14 +104,14 @@ nav {
 }
 
     .nav-links a {
-        color: #0f192d;
+        color: var(--brand-main);
         text-decoration: none;
         transition: opacity 0.3s;
         font-weight: 500;
     }
 
         .nav-links a:hover {
-            background-color: #0f192d;
+            background-color: var(--brand-main);
             color: #ffffff;   
             opacity: 0.8;
         }
@@ -113,7 +127,7 @@ nav {
 .menu-toggle .bar {
     width: 25px;
     height: 3px;
-    background-color: #0f192d;
+    background-color: var(--brand-main);
     margin: 3px 0;
     transition: 0.3s;
 }
@@ -122,7 +136,7 @@ nav {
    HERO SECTION
 ========================================================= */
 .hero {
-    background: #0f192d;
+    background: var(--brand-main);
     color: #ffffff;
     padding: 6rem 0;
     text-align: center;
@@ -161,7 +175,7 @@ nav {
    BUTTONS & CTA
 ========================================================= */
 .cta-section {
-  background: #1e4a7a;    
+  background: var(--brand-main);    
      color: #ffffff;
      text-align: center;
      padding: 5rem 0;
@@ -172,7 +186,7 @@ nav {
 }
 
 .intro-section {
-    background: #1e4a7a;
+    background: var(--brand-main);
     color: #ffffff;
     font-size: 1.5rem;
     padding: 6rem 0;
@@ -204,24 +218,24 @@ nav {
 }
 
 .btn-primary {
-    background: #f59e0b;
+    background: var(--brand-accent);
     color: #ffffff;
 }
 
 .btn-primary:hover {
         background-color: #ffffff;
-        color: #f59e0b;   
+        color: var(--brand-accent);   
         transform: translateY(-2px);
         box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .btn-secondary {
     background: #ffffff;
-    color: #0f192d;
+    color: var(--brand-main);
 }
 
 .btn-secondary:hover {
-        color: #f59e0b;   
+        color: var(--brand-accent);   
         transform: translateY(-2px);
         box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
@@ -232,7 +246,7 @@ nav {
 h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #0f192d;
+    color: var(--brand-main);
     text-align: center;
     font-weight: 700;
 }
@@ -242,7 +256,7 @@ h2 {
     max-width: 800px;
     margin: 0 auto 3rem;
     font-size: 1.1rem;
-    color: #0f192d;
+    color: var(--brand-main);
 }
 
 /* ========================================================= 
@@ -274,7 +288,7 @@ h2 {
 }
 
 .feature-card h3 {
-    color: #0f192d;
+    color: var(--brand-main);
     margin-bottom: 1rem;
     font-size: 1.3rem;
     font-weight: 600;
@@ -304,7 +318,7 @@ h2 {
     background: #ffffff;
     padding: 2rem;
     border-radius: 10px;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid var(--brand-accent);
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     position: relative; 
     transition: transform 0.2s;
@@ -319,13 +333,13 @@ h2 {
   transform: translateY(4px); /* Moves the card when clicked */
 }
     .service-card h3 {
-        color: #0f192d;
+        color: var(--brand-main);
         margin-bottom: 1rem;
         font-weight: 600;
     }
 
     .service-card h4 {
-        color: #0f192d;
+        color: var(--brand-main);
         margin-bottom: 1rem;
         font-weight: 600;
         font-size: 1.5rem;
@@ -346,7 +360,7 @@ h2 {
             content: "✓";
             position: absolute;
             left: 0;
-            color: #f59e0b;
+            color: var(--brand-accent);
             font-weight: bold;
         }
 
@@ -475,12 +489,12 @@ h2 {
 .stat-number {
     font-size: 3rem;
     font-weight: bold;
-    color: #0f192d;
+    color: var(--brand-main);
     display: block;
 }
 
 .stat-label {
-    color: #0f192d;
+    color: var(--brand-main);
     font-size: 1.1rem;
     margin-top: 0.5rem;
 }
@@ -504,13 +518,13 @@ h2 {
 }
 
 .leadership-bio h3 {
-    color: #0f192d;
+    color: var(--brand-main);
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
 }
 
 .leadership-bio .title {
-    color: #f59e0b;
+    color: var(--brand-accent);
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -528,13 +542,13 @@ h2 {
 }
 
 .partners-heading {
-    color: #0f192d;
+    color: var(--brand-main);
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
 .partners-intro {
-    color: #0f192d;
+    color: var(--brand-main);
     margin-bottom: 1.5rem;
 }
 
@@ -555,7 +569,7 @@ h2 {
 }
 
 .partner-logo:hover {
-    background-color: #0f192d;
+    background-color: var(--brand-main);
     color: #ffffff;   
     opacity: 1;
 }
@@ -580,7 +594,7 @@ h2 {
 }
 
 .industry-tag {
-    background: #0f192d;
+    background: var(--brand-main);
     color: #ffffff;
     padding: 0.75rem 1.5rem;
     border-radius: 25px;
@@ -598,7 +612,7 @@ h2 {
     background: #ffffff;
     padding: 2rem;
     border-radius: 10px;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid var(--brand-accent);
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     position: relative; 
     transition: transform 0.2s;
@@ -610,7 +624,7 @@ h2 {
 }
 
     .industry-card h3 {
-        color: #0f192d;
+        color: var(--brand-main);
         margin-bottom: 1rem;
         font-weight: 600;
     }
@@ -630,7 +644,7 @@ h2 {
             content: "✓";
             position: absolute;
             left: 0;
-            color: #f59e0b;
+            color: var(--brand-accent);
             font-weight: bold;
         }
 .industry-card-link {
@@ -688,7 +702,7 @@ h2 {
     background: #ffffff;
     padding: 2rem;
     border-radius: 10px;
-    border-top: 4px solid #f59e0b;
+    border-top: 4px solid var(--brand-accent);
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -700,14 +714,14 @@ h2 {
     }
 
     .insight-card h2 {        
-        color: #0f192d;
+        color: var(--brand-main);
         font-size: 1.4rem;
         margin-bottom: 1rem;
         font-weight: 600;
     }
 
     .insight-card p {
-        color: #0f192d;
+        color: var(--brand-main);
         line-height: 1.7;
         margin-bottom: 1.5rem;
     }
@@ -729,7 +743,7 @@ h2 {
     }
 
 .card-read-link {
-    color: #f59e0b;
+    color: var(--brand-accent);
     font-weight: 600;
     margin-top: 0.5rem;
 }
@@ -766,7 +780,7 @@ a.insight-card-link:hover * {
 }
 
 .cta-section {
-     background: #1e4a7a;
+     background: var(--brand-main);
      color: #ffffff;
 }
 
@@ -805,7 +819,7 @@ a.insight-card-link:hover * {
     }
 
         .contact-item a:hover {
-            background-color: #0f192d;
+            background-color: var(--brand-main);
             color: #ffffff;   
             text-decoration: underline;
         }
@@ -820,7 +834,7 @@ a.insight-card-link:hover * {
 }
 
     .contact-form h2 {
-        color: #0f192d;
+        color: var(--brand-main);
         margin-bottom: 2rem;
         text-align: left;
     }
@@ -834,7 +848,7 @@ a.insight-card-link:hover * {
 
     .contact-form form .form-group label {
         display: block;
-        color: #0f192d;
+        color: var(--brand-main);
         font-weight: 600;
         margin-bottom: 0.5rem;
         font-size: 0.95rem;
@@ -858,7 +872,7 @@ a.insight-card-link:hover * {
         .contact-form form .form-group input[type="email"]:focus,
         .contact-form form .form-group textarea:focus {
             outline: none;
-            border-color: #f59e0b;
+            border-color: var(--brand-accent);
             box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
         }
 
@@ -890,7 +904,7 @@ a.insight-card-link:hover * {
 .contact-form form button[type="submit"] {
     width: 100%;
     padding: 1rem 2rem;
-    background: #f59e0b;
+    background: var(--brand-accent);
     color: #ffffff;
     border: none;
     border-radius: 8px;
