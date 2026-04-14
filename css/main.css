@@ -93,6 +93,7 @@ nav {
     width: auto; !important;
     flex-shrink: 0; /* prevents image from being squeezed */
     object-fit: contain; /* ensures aspect ratio is maintained */
+    display: block;
     max-width: 100%; !important;
 }
 
