@@ -35,7 +35,7 @@ section {
 
 footer {
     background: #1a202c;
-    color: white;
+    color: #ffffff;
     text-align: center;
     padding: 2rem 0;
 }
@@ -97,7 +97,8 @@ nav {
     }
 
         .nav-links a:hover {
-            filter: invert(100%);   /* FH  */
+            background-color: #1e3a5f;
+            color: #ffffff;   /* FH  */
             opacity: 0.8;
         }
 
@@ -122,7 +123,7 @@ nav {
 ========================================================= */
 .hero {
     background: #1e3a5f;
-    color: white;
+    color: #ffffff;
     padding: 6rem 0;
     text-align: center;
     position: relative;
@@ -161,18 +162,18 @@ nav {
 ========================================================= */
 .cta-section {
   background: #1e4a7f;    
-     color: white;
+     color: #ffffff;
      text-align: center;
      padding: 5rem 0;
 }
 
 .cta-section h2 {
-     color: white;
+     color: #ffffff;
 }
 
 .intro-section {
     background: #1e4a7a;
-    color: white;
+    color: #ffffff;
     font-size: 1.5rem;
     padding: 6rem 0;
     text-align: center;
@@ -202,21 +203,30 @@ nav {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-    .btn:hover {
-        filter: invert(100%);  /* FH  */  
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-
 .btn-primary {
     background: #f59e0b;
-    color: white;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+        background-color: #ffffff;
+        color: #f59e0b;   /* FH  */
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .btn-secondary {
-    background: white;
+    background: #ffffff;
     color: #1e3a5f;
 }
+
+.btn-secondary:hover {
+        background-color: #1e3a5f;
+        color: #ffffff;   /* FH  */
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
 /* ========================================================= 
    TYPOGRAPHY
 ========================================================= */
@@ -247,18 +257,19 @@ h2 {
 }
 
 .feature-card {
-    background: white;
+    background: #ffffff;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-    .feature-card:hover {
-       filter: invert(100%);   /* FH  */
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    }
+.feature-card:hover {
+    background-color: #1e3a5f;
+    color: #ffffff;   /* FH  */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
 
 .feature-icon {
     font-size: 2.5rem;
@@ -289,7 +300,7 @@ h2 {
 }
 
 .service-card {
-    background: white;
+    background: #ffffff;
     padding: 2rem;
     border-radius: 10px;
     border-left: 4px solid #f59e0b;
@@ -298,7 +309,11 @@ h2 {
     transition: transform 0.2s;
 }
 .service-card :hover {
-            filter: invert(100%);  /* FH  */
+    background-color: #1e3a5f;
+    color: #ffffff;   /* FH  */
+   transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+
 }
 
 .service-card:active {
@@ -383,7 +398,7 @@ h2 {
 }
 
 .service-section-b {
-    background: white;
+    background: #ffffff;
 }
 
 .service-section-b h3 {
@@ -452,7 +467,7 @@ h2 {
 }
 
 .stat-card {
-    background: white;
+    background: #ffffff;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -541,7 +556,8 @@ h2 {
 }
 
 .partner-logo:hover {
-    filter: invert(100%);  /* FH  */
+    background-color: #1e3a5f;
+    color: #ffffff;   /* FH  */
     opacity: 1;
 }
 
@@ -566,7 +582,7 @@ h2 {
 
 .industry-tag {
     background: #1e3a5f;
-    color: white;
+    color: #ffffff;
     padding: 0.75rem 1.5rem;
     border-radius: 25px;
     font-size: 0.95rem;
@@ -580,11 +596,19 @@ h2 {
 }
 
 .industry-card {
-    background: white;
+    background: #ffffff;
     padding: 2rem;
     border-radius: 10px;
     border-left: 4px solid #f59e0b;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.industry-card :hover {
+    background-color: #1e3a5f;
+    color: #ffffff;   /* FH  */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+
 }
 
     .industry-card h3 {
@@ -622,7 +646,7 @@ h2 {
 }
 
 .insight-card {
-    background: white;
+    background: #ffffff;
     padding: 2rem;
     border-radius: 10px;
     border-top: 4px solid #f59e0b;
@@ -631,7 +655,8 @@ h2 {
 }
 
     .insight-card:hover {
-        filter: invert(100%);   /* FH  */
+        background-color: #1e3a5f;
+        color: #ffffff;   /* FH  */
         transform: translateY(-5px);
         box-shadow: 0 10px 20px rgba(0,0,0,0.15);
         cursor: pointer;
@@ -673,7 +698,9 @@ h2 {
 }
 
 .insight-card-link:hover .card-read-link {
-    filter: invert(100%);   /* FH  */
+    background-color: #1e3a5f;
+    color: #ffffff;   /* FH  */
+
     text-decoration: underline;
 }
 
@@ -699,14 +726,14 @@ a.insight-card-link:hover * {
 ========================================================= */
 .contact-section {
     background: #f8fafc;
-    color: white;
+    color: #ffffff;
     text-align: center;
     padding: 5rem 0;
 }
 
 .cta-section {
      background: #1e4a7a;
-     color: white;
+     color: #ffffff;
 }
 
 .cta-tagline {
@@ -715,7 +742,7 @@ a.insight-card-link:hover * {
 }
 
     .contact-section h2 {
-        color: white;
+        color: #ffffff;
     }
 
 .contact-info {
@@ -739,12 +766,13 @@ a.insight-card-link:hover * {
     }
 
     .contact-item a {
-        color: white;
+        color: #ffffff;
         text-decoration: none;
     }
 
         .contact-item a:hover {
-            filter: invert(100%);  /* FH  */
+               background-color: #1e3a5f;
+                color: #ffffff;   /* FH  */
             text-decoration: underline;
         }
 /* ========================================================= 
@@ -829,7 +857,7 @@ a.insight-card-link:hover * {
     width: 100%;
     padding: 1rem 2rem;
     background: #f59e0b;
-    color: white;
+    color: #ffffff;
     border: none;
     border-radius: 8px;
     font-size: 1.1rem;
@@ -842,7 +870,8 @@ a.insight-card-link:hover * {
 
     .contact-form form .btn-submit:hover:not(:disabled),
     .contact-form form button[type="submit"]:hover:not(:disabled) {
-        filter: invert(100%);
+        background-color: #1e3a5f;
+        color: #ffffff;   /* FH  */
         transform: translateY(-2px);
         box-shadow: 0 6px 12px rgba(245, 158, 11, 0.4);
     }
@@ -874,7 +903,7 @@ a.insight-card-link:hover * {
             margin-top: -10px;
             border: 3px solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
-            border-top-color: white;
+            border-top-color: #ffffff;
             animation: spinner 0.8s linear infinite;
         }
 /* ========================================================= 
