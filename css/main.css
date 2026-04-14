@@ -628,7 +628,7 @@ h2 {
         cursor: pointer;
     }
 
-    .insight-card h2 {         /*FH changed to h2 as this is now the level */
+    .insight-card h2 {        
         color: #1e3a5f;
         font-size: 1.4rem;
         margin-bottom: 1rem;
@@ -739,45 +739,6 @@ a.insight-card-link:hover * {
 /* ========================================================= 
    CONTACT FORM SECTION
 ========================================================= */
-/*FH SUSPECT NOT USED.....
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 3rem;
-    align-items: start;
-}
-
-.contact-info-light {
-    background: #ffffff;
-    color: #0f2a44;
-    padding: 3rem;
-    border-radius: 14px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-    text-align: left;
-}
-
-    .contact-info-light h2 {
-        color: #0f2a44;
-        text-align: left;
-    }
-/*  FHFH test   #1f3a5a;   */
-    .contact-info-light p {
-        color: #FF000A         
-        margin-bottom: 2rem;
-        line-height: 1.6;
-    }
-
-    .contact-info-light a {
-        color: #0f2a44;
-        font-weight: 600;
-        text-decoration: none;
-    }
-
-        .contact-info-light a:hover {
-            text-decoration: underline;
-        }
-FHFHFHFHFHFHFHFHFH */
-
 .contact-form {
     background: #ffffff;
     padding: 3rem;
@@ -905,31 +866,6 @@ FHFHFHFHFHFHFHFHFH */
             border-top-color: white;
             animation: spinner 0.8s linear infinite;
         }
-/* ========================================================= 
-   CONTACT FORM - STATUS MESSAGES
-========================================================= */
-/* FH SUSPECT NOT USED.................
-.form-status {
-    display: none;
-    margin-top: 1.5rem;
-    padding: 1rem;
-    border-radius: 8px;
-    font-weight: 500;
-    text-align: center;
-}
-
-    .form-status.success {
-        background: #d1fae5;
-        color: #065f46;
-        border: 1px solid #6ee7b7;
-    }
-
-    .form-status.error {
-        background: #fee2e2;
-        color: #991b1b;
-        border: 1px solid #fca5a5;
-    }
-FHFHFHFHFHFHFHFHFH      */
 /* ========================================================= 
    ANIMATIONS
 ========================================================= */
