@@ -739,6 +739,7 @@ a.insight-card-link:hover * {
 /* ========================================================= 
    CONTACT FORM SECTION
 ========================================================= */
+/*FH SUSPECT NOT USED.....
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -775,6 +776,8 @@ a.insight-card-link:hover * {
         .contact-info-light a:hover {
             text-decoration: underline;
         }
+FHFHFHFHFHFHFHFHFH */
+
 .contact-form {
     background: #ffffff;
     padding: 3rem;
@@ -905,6 +908,7 @@ a.insight-card-link:hover * {
 /* ========================================================= 
    CONTACT FORM - STATUS MESSAGES
 ========================================================= */
+/* FH SUSPECT NOT USED.................
 .form-status {
     display: none;
     margin-top: 1.5rem;
@@ -925,6 +929,7 @@ a.insight-card-link:hover * {
         color: #991b1b;
         border: 1px solid #fca5a5;
     }
+FHFHFHFHFHFHFHFHFH      */
 /* ========================================================= 
    ANIMATIONS
 ========================================================= */
