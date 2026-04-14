@@ -88,13 +88,24 @@ nav {
 }
 
 .logo img {
-    content: var(--logo-src); /* <--- ADD THIS LINE */
-    height: 50px; !important;
-    width: auto; !important;
-    flex-shrink: 0; /* prevents image from being squeezed */
-    object-fit: contain; /* ensures aspect ratio is maintained */
-    display: block;
-    max-width: 100%; !important;
+    /* 1. Use the variable to replace the image */
+    content: var(--logo-src);
+    
+    /* 2. Force the size (Critical fix for the giant logo) */
+    display: inline-block; /* Helps some browsers respect dimensions with 'content' */
+    height: 50px !important; 
+    width: auto !important;
+    
+    /* 3. Ensure it doesn't bleed out of the header */
+    max-height: 50px;
+    object-fit: contain;
+}
+
+/* Ensure the link container doesn't expand */
+.logo a {
+    display: flex;
+    align-items: center;
+    height: 50px;
 }
 
 .nav-links {
