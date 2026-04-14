@@ -10,7 +10,7 @@
 body {
     font-family: 'Avenir Next', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
-    color: #1e293b;
+    color: #0f192d;
 }
 
 img {
@@ -49,7 +49,7 @@ header nav.container {
 
 header {
     background: #ffffff;
-    color: #1e3a5f;
+    color: #0f192d;
     padding: 1rem 0;
     position: sticky;
     top: 0;
@@ -90,14 +90,14 @@ nav {
 }
 
     .nav-links a {
-        color: #1e3a5f;
+        color: #0f192d;
         text-decoration: none;
         transition: opacity 0.3s;
         font-weight: 500;
     }
 
         .nav-links a:hover {
-            background-color: #1e3a5f;
+            background-color: #0f192d;
             color: #ffffff;   
             opacity: 0.8;
         }
@@ -113,7 +113,7 @@ nav {
 .menu-toggle .bar {
     width: 25px;
     height: 3px;
-    background-color: #1e3a5f;
+    background-color: #0f192d;
     margin: 3px 0;
     transition: 0.3s;
 }
@@ -122,7 +122,7 @@ nav {
    HERO SECTION
 ========================================================= */
 .hero {
-    background: #1e3a5f;
+    background: #0f192d;
     color: #ffffff;
     padding: 6rem 0;
     text-align: center;
@@ -161,7 +161,7 @@ nav {
    BUTTONS & CTA
 ========================================================= */
 .cta-section {
-  background: #1e4a7f;    
+  background: #1e4a7a;    
      color: #ffffff;
      text-align: center;
      padding: 5rem 0;
@@ -217,7 +217,7 @@ nav {
 
 .btn-secondary {
     background: #ffffff;
-    color: #1e3a5f;
+    color: #0f192d;
 }
 
 .btn-secondary:hover {
@@ -232,7 +232,7 @@ nav {
 h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #1e3a5f;
+    color: #0f192d;
     text-align: center;
     font-weight: 700;
 }
@@ -242,7 +242,7 @@ h2 {
     max-width: 800px;
     margin: 0 auto 3rem;
     font-size: 1.1rem;
-    color: #334155;
+    color: #0f192d;
 }
 
 /* ========================================================= 
@@ -274,7 +274,7 @@ h2 {
 }
 
 .feature-card h3 {
-    color: #1e3a5f;
+    color: #0f192d;
     margin-bottom: 1rem;
     font-size: 1.3rem;
     font-weight: 600;
@@ -319,13 +319,13 @@ h2 {
   transform: translateY(4px); /* Moves the card when clicked */
 }
     .service-card h3 {
-        color: #1e3a5f;
+        color: #0f192d;
         margin-bottom: 1rem;
         font-weight: 600;
     }
 
     .service-card h4 {
-        color: #1e3a5f;
+        color: #0f192d;
         margin-bottom: 1rem;
         font-weight: 600;
         font-size: 1.5rem;
@@ -418,7 +418,7 @@ h2 {
 .frameworks-table,
 .frameworks-table th,
 .frameworks-table td {
-  border: 1px solid #ddd;
+  border: 1px solid #f1f5f9;
 }
 
 .frameworks-table {
@@ -475,12 +475,12 @@ h2 {
 .stat-number {
     font-size: 3rem;
     font-weight: bold;
-    color: #1e3a5f;
+    color: #0f192d;
     display: block;
 }
 
 .stat-label {
-    color: #334155;
+    color: #0f192d;
     font-size: 1.1rem;
     margin-top: 0.5rem;
 }
@@ -504,7 +504,7 @@ h2 {
 }
 
 .leadership-bio h3 {
-    color: #1e3a5f;
+    color: #0f192d;
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
 }
@@ -524,17 +524,17 @@ h2 {
     text-align: center;
     margin-top: 4rem;
     padding-top: 3rem;
-    border-top: 2px solid #e2e8f0;
+    border-top: 2px solid #f1f5f9;
 }
 
 .partners-heading {
-    color: #1e3a5f;
+    color: #0f192d;
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
 .partners-intro {
-    color: #334155;
+    color: #0f192d;
     margin-bottom: 1.5rem;
 }
 
@@ -555,7 +555,7 @@ h2 {
 }
 
 .partner-logo:hover {
-    background-color: #1e3a5f;
+    background-color: #0f192d;
     color: #ffffff;   
     opacity: 1;
 }
@@ -580,7 +580,7 @@ h2 {
 }
 
 .industry-tag {
-    background: #1e3a5f;
+    background: #0f192d;
     color: #ffffff;
     padding: 0.75rem 1.5rem;
     border-radius: 25px;
@@ -610,7 +610,7 @@ h2 {
 }
 
     .industry-card h3 {
-        color: #1e3a5f;
+        color: #0f192d;
         margin-bottom: 1rem;
         font-weight: 600;
     }
@@ -700,14 +700,14 @@ h2 {
     }
 
     .insight-card h2 {        
-        color: #1e3a5f;
+        color: #0f192d;
         font-size: 1.4rem;
         margin-bottom: 1rem;
         font-weight: 600;
     }
 
     .insight-card p {
-        color: #334155;
+        color: #0f192d;
         line-height: 1.7;
         margin-bottom: 1.5rem;
     }
@@ -805,7 +805,7 @@ a.insight-card-link:hover * {
     }
 
         .contact-item a:hover {
-            background-color: #1e3a5f;
+            background-color: #0f192d;
             color: #ffffff;   
             text-decoration: underline;
         }
@@ -820,7 +820,7 @@ a.insight-card-link:hover * {
 }
 
     .contact-form h2 {
-        color: #0f2a44;
+        color: #0f192d;
         margin-bottom: 2rem;
         text-align: left;
     }
@@ -834,7 +834,7 @@ a.insight-card-link:hover * {
 
     .contact-form form .form-group label {
         display: block;
-        color: #0f2a44;
+        color: #0f192d;
         font-weight: 600;
         margin-bottom: 0.5rem;
         font-size: 0.95rem;
@@ -845,7 +845,7 @@ a.insight-card-link:hover * {
     .contact-form form .form-group textarea {
         width: 100%;
         padding: 0.875rem 1rem;
-        border: 2px solid #e2e8f0;
+        border: 2px solid #f1f5f9;
         border-radius: 8px;
         font-size: 1rem;
         font-family: inherit;
