@@ -1,13 +1,13 @@
 :root {
-  /* --- STANDARD SCHEME --- */
-  --logo-src: url('/assets/images/logo.svg'); /* Match your HTML path */
+  /* --- STANDARD SCHEME --- 
+  --logo-src: url('/assets/images/logo.svg'); 
   --brand-main: #0f192d;
-  --brand-accent: #f59e0b;
+  --brand-accent: #f59e0b;  */
 
   /* --- ALTERNATE SCHEME --- */
-  /* --logo-src: url('/assets/images/logoC.svg'); */
-  /* --brand-main: #333333; */
-  /* --brand-accent: #7bafd4; */
+   --logo-src: url('/assets/images/logoC.svg'); 
+   --brand-main: #333333; 
+   --brand-accent: #7bafd4; 
 }
 
 
