@@ -221,8 +221,7 @@ nav {
 }
 
 .btn-secondary:hover {
-        background-color: #1e3a5f;
-        color: #ffffff;   
+        color: #f59e0b;   
         transform: translateY(-2px);
         box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
@@ -905,8 +904,6 @@ a.insight-card-link:hover * {
 
     .contact-form form .btn-submit:hover:not(:disabled),
     .contact-form form button[type="submit"]:hover:not(:disabled) {
-        background-color: #1e3a5f;
-        color: #ffffff;   
         transform: translateY(-2px);
         box-shadow: 0 6px 12px rgba(245, 158, 11, 0.4);
     }
