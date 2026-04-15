@@ -594,10 +594,8 @@ h2 {
    INDUSTRIES SECTION
 ========================================================= */
 .industry-tags-section {
-  /*  background: #ebebeb;   *
-   background: linear-gradient(135deg, color-mix(in srgb, var(--brand-main), transparent 5%), color-mix(in srgb, var(--brand-accent), transparent 5%)
-);
-
+  /*  background: #ebebeb;   */
+   background: linear-gradient(135deg, color-mix(in srgb, var(--brand-main), transparent 5%), color-mix(in srgb, var(--brand-accent), transparent 5%));
 }
 
 .industries {
