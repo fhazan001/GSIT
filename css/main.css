@@ -47,8 +47,8 @@ section {
 }
 
 footer {
-    background: var(--brand-main);
-    color: #ffffff;
+    background: #ffffff;
+    color: var(--brand-main);
     text-align: center;
     padding: 2rem 0;
 }
@@ -200,8 +200,8 @@ nav {
 }
 
 .intro-section {
-    background: var(--brand-main);
-    color: #ffffff;
+    background:  #ffffff;
+    color: var(--brand-main);
     font-size: 1.5rem;
     padding: 6rem 0;
     text-align: center;
