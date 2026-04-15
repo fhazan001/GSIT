@@ -163,7 +163,8 @@ nav {
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(135deg, rgba(30, 58, 95, 0.95) 0%, rgba(20, 40, 70, 0.98) 100%);
+        background: var(--brand-main);      
+  /*      background: linear-gradient(135deg, rgba(30, 58, 95, 0.95) 0%, rgba(20, 40, 70, 0.98) 100%);   */
         z-index: 0;
     }
 
