@@ -10,7 +10,6 @@
    --brand-accent: #7bafd4; 
 }
 
-
 /* ========================================================= 
    GLOBAL RESET & BASE STYLES
    ========================================================= */
@@ -164,7 +163,6 @@ nav {
         right: 0;
         bottom: 0;
         background: var(--brand-main);      
-  /*      background: linear-gradient(135deg, rgba(30, 58, 95, 0.95) 0%, rgba(20, 40, 70, 0.98) 100%);   */
         z-index: 0;
     }
 
@@ -596,7 +594,10 @@ h2 {
    INDUSTRIES SECTION
 ========================================================= */
 .industry-tags-section {
-    background: #ebebeb;
+  /*  background: #ebebeb;   *
+   background: linear-gradient(135deg, color-mix(in srgb, var(--brand-main), transparent 5%), color-mix(in srgb, var(--brand-accent), transparent 5%)
+);
+
 }
 
 .industries {
