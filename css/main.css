@@ -569,7 +569,7 @@ h2 {
 }
 
 .partner-logo {
-    max-height: 100px;
+    max-height: 80px;
     width: auto;
     opacity: 0.8;
     transition: opacity 0.3s;
