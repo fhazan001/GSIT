@@ -38,173 +38,148 @@
     <link rel="stylesheet" href="/css/main.css">
 
     <!-- Schema.org Structured Data -->
-    
-    <!-- Organization Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Globally Secure IT",
-      "url": "https://globallysecureit.com",
-      "logo": "https://globallysecureit.com/assets/images/logo.svg",
-      "description": "Executive-level cybersecurity leadership and vCISO advisory services",
-      "sameAs": [
-        "https://www.linkedin.com/company/globally-secure-it/"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-516-946-1802",
-        "contactType": "Sales"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "4 Orchard Dr",
-        "addressLocality": "Woodbury",
-        "addressRegion": "NY",
-        "postalCode": "11797",
-        "addressCountry": "US"
-      }
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://globallysecureit.com/#organization",
+          "name": "Globally Secure IT, LLC",
+          "url": "https://globallysecureit.com",
+          "logo": "https://globallysecureit.com/assets/images/logo.svg",
+          "description": "vCISO advisory, cybersecurity consulting, NIST CSF assessments, IAM, and security program development for mid-market and regulated industries.",
+          "foundingDate": "2012",
+          "founder": { "@id": "https://globallysecureit.com/#fred-hazan" },
+          "employee": { "@id": "https://globallysecureit.com/#fred-hazan" },
+          "sameAs": [
+            "https://www.linkedin.com/company/globally-secure-it/",
+            "https://twitter.com/GloballySecure"
+          ],
+          "areaServed": ["United States", "Global"],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-516-946-1802",
+            "contactType": "Sales",
+            "email": "fred@globallysecureit.com"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "4 Orchard Dr",
+            "addressLocality": "Woodbury",
+            "addressRegion": "NY",
+            "postalCode": "11797",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://globallysecureit.com/#fred-hazan",
+          "name": "Fred Hazan",
+          "jobTitle": "Founder & Principal Consultant, vCISO",
+          "description": "CISSP-certified cybersecurity executive and virtual CISO. Founder of Globally Secure IT, LLC.",
+          "url": "https://globallysecureit.com/about/",
+          "image": "https://globallysecureit.com/assets/images/headshot.jpg",
+          "sameAs": [
+            "https://www.linkedin.com/in/fredhazan/",
+            "https://www.toptal.com/management-consultants/resume/fred-hazan"
+          ],
+          "worksFor": { "@id": "https://globallysecureit.com/#organization" },
+          "knowsAbout": [
+            "Virtual CISO Advisory", "NIST CSF 2.0", "NIST SP 800-53",
+            "Zero Trust Architecture", "Identity and Access Management",
+            "Incident Response Planning", "HIPAA", "CMMC 2.0",
+            "ISO 27001", "PCI DSS", "Cybersecurity Risk Assessment",
+            "Security Program Development", "AI Security Governance",
+            "Policy and SOP Development"
+          ],
+          "hasCredential": {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Certified Information Systems Security Professional (CISSP)"
+          }
+        }
+      ]
     }
     </script>
-    <!-- LocalBusiness Schema -->
+
+    <!-- ProfessionalService Schemas -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Globally Secure IT",
-      "image": "https://globallysecureit.com/assets/images/og-globallysecureit.png",
-      "description": "Virtual CISO advisory and cybersecurity strategy services",
-      "telephone": "516-946-1802",
-      "email": "fred@globallysecureit.com",
-      "url": "https://globallysecureit.com",
-      "areaServed": ["United States", "Global"]
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://globallysecureit.com/services/#vciso",
+          "name": "Virtual CISO Advisory & Leadership",
+          "description": "Fractional CISO leadership including board reporting, security strategy, program governance, and a structured First 90 Days engagement. Ongoing retainer tiers from 8 to 80 hours per month.",
+          "provider": { "@id": "https://globallysecureit.com/#organization" },
+          "areaServed": ["United States", "Global"],
+          "serviceType": "vCISO Advisory",
+          "url": "https://globallysecureit.com/services/#csg"
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://globallysecureit.com/services/#risk",
+          "name": "Enterprise Risk Management & Compliance Assessments",
+          "description": "Framework implementation and readiness assessments for NIST CSF 2.0, NIST SP 800-53, CMMC 2.0, ISO 27001, HIPAA, PCI DSS, SOC 2, and CRI Profile. Engagements typically run 2 weeks to 6 months depending on framework and scope.",
+          "provider": { "@id": "https://globallysecureit.com/#organization" },
+          "areaServed": ["United States", "Global"],
+          "serviceType": "Cybersecurity Risk Assessment",
+          "url": "https://globallysecureit.com/services/#erm"
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://globallysecureit.com/services/#policy",
+          "name": "Policy, SOP & Security Program Development",
+          "description": "Creation of full policy libraries, standard operating procedures, control catalogs, and audit-ready documentation programs built to client brand and regulatory requirements.",
+          "provider": { "@id": "https://globallysecureit.com/#organization" },
+          "areaServed": ["United States", "Global"],
+          "serviceType": "Security Program Development",
+          "url": "https://globallysecureit.com/services/#erm"
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://globallysecureit.com/services/#iam",
+          "name": "Identity & Access Management (IAM)",
+          "description": "Enterprise IAM strategy, Zero Trust architecture, Privileged Access Management (PAM), Identity Governance and Administration (IGA), MFA, and SSO. Assessments typically run 2 to 5 weeks.",
+          "provider": { "@id": "https://globallysecureit.com/#organization" },
+          "areaServed": ["United States", "Global"],
+          "serviceType": "Identity and Access Management",
+          "url": "https://globallysecureit.com/services/#iam"
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://globallysecureit.com/services/#cloud",
+          "name": "IT, Cloud & Network Security",
+          "description": "Cloud security architecture, Zero Trust network design, infrastructure optimization, and cloud cost reduction. Engagements typically run 3 to 8 weeks.",
+          "provider": { "@id": "https://globallysecureit.com/#organization" },
+          "areaServed": ["United States", "Global"],
+          "serviceType": "Cloud Security",
+          "url": "https://globallysecureit.com/services/#icn"
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://globallysecureit.com/services/#defense",
+          "name": "Advanced Cyber Defense",
+          "description": "Threat analytics and SIEM optimization, incident response planning, business impact analysis, ransomware defense strategy, and SOC maturity assessment. Engagements typically run 3 to 6 weeks.",
+          "provider": { "@id": "https://globallysecureit.com/#organization" },
+          "areaServed": ["United States", "Global"],
+          "serviceType": "Cyber Defense",
+          "url": "https://globallysecureit.com/services/#acd"
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://globallysecureit.com/services/#ai",
+          "name": "AI-Driven Security Innovation",
+          "description": "Secure AI integration strategies, AI governance frameworks aligned to NIST AI RMF and EU AI Act, AI-enhanced threat detection, and automated security operations. Engagements typically run 4 to 10 weeks.",
+          "provider": { "@id": "https://globallysecureit.com/#organization" },
+          "areaServed": ["United States", "Global"],
+          "serviceType": "AI Security",
+          "url": "https://globallysecureit.com/services/#asi"
+        }
+      ]
     }
     </script>
-    <!-- Person Schema (Fred Hazan) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Fred Hazan",
-      "url": "https://globallysecureit.com",
-      "jobTitle": "Founder & Principal Consultant",
-      "description": "Virtual CISO with 30+ years of cybersecurity and IT leadership experience",
-      "sameAs": [
-        "https://www.linkedin.com/in/fredhazan/"
-      ],
-      "workLocation": {
-        "@type": "PostalAddress",
-        "streetAddress": "4 Orchard Dr",
-        "addressLocality": "Woodbury",
-        "addressRegion": "NY",
-        "postalCode": "11797",
-        "addressCountry": "US"
-      }
-    }
-    </script>
-<!-- Service Schemas for /services/index.html -->
-
-<!-- Service 1: Virtual CISO Advisory -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Virtual CISO Advisory & Leadership",
-  "description": "Executive-level cybersecurity leadership and strategic guidance without the full-time CISO cost. Includes advisory, security program creation, and technology roadmap development.",
-  "provider": {
-    "@type": "Organization",
-    "name": "Globally Secure IT",
-    "url": "https://globallysecureit.com"
-  },
-  "areaServed": ["United States", "Global"],
-  "serviceType": "Cybersecurity Consulting"
-}
-</script>
-
-<!-- Service 2: Enterprise Risk Management -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Enterprise Risk Management",
-  "description": "Comprehensive risk management services including framework implementation (NIST, ISO 27001, HIPAA), cybersecurity risk assessment, third-party risk assessment, and vendor security evaluation.",
-  "provider": {
-    "@type": "Organization",
-    "name": "Globally Secure IT",
-    "url": "https://globallysecureit.com"
-  },
-  "areaServed": ["United States", "Global"],
-  "serviceType": "Cybersecurity Consulting"
-}
-</script>
-
-<!-- Service 3: Identity & Access Management -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Identity & Access Management (IAM)",
-  "description": "IAM strategy and roadmap development, identity governance and administration (IGA), privileged access management (PAM), multi-factor authentication (MFA), and single sign-on (SSO) implementation.",
-  "provider": {
-    "@type": "Organization",
-    "name": "Globally Secure IT",
-    "url": "https://globallysecureit.com"
-  },
-  "areaServed": ["United States", "Global"],
-  "serviceType": "Cybersecurity Consulting"
-}
-</script>
-
-<!-- Service 4: IT, Cloud & Network Security -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "IT, Cloud & Network Security",
-  "description": "Cloud and network security validation, cloud security architecture design, infrastructure optimization, and IT security assessment services.",
-  "provider": {
-    "@type": "Organization",
-    "name": "Globally Secure IT",
-    "url": "https://globallysecureit.com"
-  },
-  "areaServed": ["United States", "Global"],
-  "serviceType": "Cybersecurity Consulting"
-}
-</script>
-
-<!-- Service 5: Advanced Cyber Defense -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Advanced Cyber Defense",
-  "description": "Threat analytics and SIEM optimization, incident response planning, ransomware defense strategies, business impact analysis, and security operations enhancement.",
-  "provider": {
-    "@type": "Organization",
-    "name": "Globally Secure IT",
-    "url": "https://globallysecureit.com"
-  },
-  "areaServed": ["United States", "Global"],
-  "serviceType": "Cybersecurity Consulting"
-}
-</script>
-
-<!-- Service 6: AI-Driven Security Innovation -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "AI-Driven Security Innovation",
-  "description": "Secure AI integration strategies, AI security accelerators, AI-enhanced threat detection, automated security operations, and AI governance and risk management.",
-  "provider": {
-    "@type": "Organization",
-    "name": "Globally Secure IT",
-    "url": "https://globallysecureit.com"
-  },
-  "areaServed": ["United States", "Global"],
-  "serviceType": "Cybersecurity Consulting"
-}
-</script>
 </head>
 
 <body>
