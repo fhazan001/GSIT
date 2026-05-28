@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
     <loc>https://globallysecureit.com/</loc>
@@ -41,6 +40,90 @@
     <loc>https://globallysecureit.com/insights/</loc>
     <lastmod>2026-05-28</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://globallysecureit.com/insights/2025-11-09-if-you-could-fix-only-one-thing-in-your-data-security-roadmap/</loc>
+    <lastmod>2025-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://globallysecureit.com/insights/2025-11-25-the-identity-paradox/</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://globallysecureit.com/insights/2025-11-26-how-ai-just-rewired-the-cisos-role/</loc>
+    <lastmod>2025-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://globallysecureit.com/insights/2025-11-28-continuous-risk-management-why-cisos-need-ai-augmentation-with-guardrails/</loc>
+    <lastmod>2025-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://globallysecureit.com/insights/2025-11-30-your-security-stack-is-costing-you-more-than-money/</loc>
+    <lastmod>2025-11-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://globallysecureit.com/insights/2025-12-02-security-without-compromise-the-flexible-soc-evolution/</loc>
+    <lastmod>2025-12-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://globallysecureit.com/insights/2025-12-16-why-microsoft-copilot-is-exposing-your-identity-governance-gaps/</loc>
+    <lastmod>2025-12-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://globallysecureit.com/insights/2025-12-18-third-party-risk-in-the-ai-era/</loc>
+    <lastmod>2025-12-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://globallysecureit.com/insights/2026-01-24-dont-be-the-company-that-never-tested-its-ransomware-recovery-plan/</loc>
+    <lastmod>2026-01-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://globallysecureit.com/insights/2026-02-23-move-toward-zero-trust-before-the-next-breach-forces-you/</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://globallysecureit.com/insights/2026-04-02-cybersecurity-roi-turning-risk-into-business-value/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://globallysecureit.com/insights/2026-05-practitioners-guide-to-cybersecurity-frameworks-2026/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
