@@ -39,69 +39,71 @@
 
     <!-- Schema.org Structured Data -->
     
-    <!-- Organization Schema -->
+    <!-- Organization + Person Schema (linked @graph) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Globally Secure IT",
-      "url": "https://globallysecureit.com",
-      "logo": "https://globallysecureit.com/assets/images/logo.svg",
-      "description": "Executive-level cybersecurity leadership and vCISO advisory services",
-      "sameAs": [
-        "https://www.linkedin.com/company/globally-secure-it/"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-516-946-1802",
-        "contactType": "Sales"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "4 Orchard Dr",
-        "addressLocality": "Woodbury",
-        "addressRegion": "NY",
-        "postalCode": "11797",
-        "addressCountry": "US"
-      }
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://globallysecureit.com/#organization",
+          "name": "Globally Secure IT, LLC",
+          "url": "https://globallysecureit.com",
+          "logo": "https://globallysecureit.com/assets/images/logo.svg",
+          "description": "vCISO advisory, cybersecurity consulting, NIST CSF assessments, IAM, and security program development for mid-market and regulated industries.",
+          "foundingDate": "2012",
+          "founder": { "@id": "https://globallysecureit.com/#fred-hazan" },
+          "employee": { "@id": "https://globallysecureit.com/#fred-hazan" },
+          "sameAs": [
+            "https://www.linkedin.com/company/globally-secure-it/",
+            "https://twitter.com/GloballySecure"
+          ],
+          "areaServed": ["United States", "Global"],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-516-946-1802",
+            "contactType": "Sales",
+            "email": "fred@globallysecureit.com"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "4 Orchard Dr",
+            "addressLocality": "Woodbury",
+            "addressRegion": "NY",
+            "postalCode": "11797",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://globallysecureit.com/#fred-hazan",
+          "name": "Fred Hazan",
+          "jobTitle": "Founder & Principal Consultant, vCISO",
+          "description": "CISSP-certified cybersecurity executive and virtual CISO. Founder of Globally Secure IT, LLC.",
+          "url": "https://globallysecureit.com/about/",
+          "image": "https://globallysecureit.com/assets/images/headshot.jpg",
+          "sameAs": [
+            "https://www.linkedin.com/in/fredhazan/",
+            "https://www.toptal.com/management-consultants/resume/fred-hazan"
+          ],
+          "worksFor": { "@id": "https://globallysecureit.com/#organization" },
+          "knowsAbout": [
+            "Virtual CISO Advisory", "NIST CSF 2.0", "NIST SP 800-53",
+            "Zero Trust Architecture", "Identity and Access Management",
+            "Incident Response Planning", "HIPAA", "CMMC 2.0",
+            "ISO 27001", "PCI DSS", "Cybersecurity Risk Assessment",
+            "Security Program Development", "AI Security Governance"
+          ],
+          "hasCredential": {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Certified Information Systems Security Professional (CISSP)"
+          }
+        }
+      ]
     }
     </script>
-    <!-- LocalBusiness Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Globally Secure IT",
-      "image": "https://globallysecureit.com/assets/images/og-globallysecureit.png",
-      "description": "Virtual CISO advisory and cybersecurity strategy services",
-      "telephone": "516-946-1802",
-      "email": "fred@globallysecureit.com",
-      "url": "https://globallysecureit.com",
-      "areaServed": ["United States", "Global"]
-    }
-    </script>
-    <!-- Person Schema (Fred Hazan) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Fred Hazan",
-      "url": "https://globallysecureit.com",
-      "jobTitle": "Founder & Principal Consultant",
-      "description": "Virtual CISO with 30+ years of cybersecurity and IT leadership experience",
-      "sameAs": [
-        "https://www.linkedin.com/in/fredhazan/"
-      ],
-      "workLocation": {
-        "@type": "PostalAddress",
-        "streetAddress": "4 Orchard Dr",
-        "addressLocality": "Woodbury",
-        "addressRegion": "NY",
-        "postalCode": "11797",
-        "addressCountry": "US"
-      }
-    }
-    </script>
+
+
 <!-- Service Schemas for /services/index.html -->
 
 <!-- Service 1: Virtual CISO Advisory -->
@@ -221,9 +223,9 @@
             </div>
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
-                <li><a href="#about">Why Us</a></li>
+                <li><a href="/about/">About</a></li>
                 <li><a href="/services/">Services</a></li>
-                <li><a href="#results">Results</a></li>
+                <li><a href="/faq/">FAQ</a></li>
                 <li><a href="/industries/">Industries</a></li>
                 <li><a href="/insights/">Insights</a></li>
                 <li><a href="/contact/?Page=Main&Context=Contact">Contact</a></li>
@@ -240,6 +242,7 @@
                     <a href="/contact/?Page=Main&Context=Schedule%20Consultation" class="btn btn-primary">Schedule a Consultation</a>
                     <a href="/services/" class="btn btn-secondary">Our Services</a>
                 </div>
+                <p class="hero-about-link"><a href="/about/">Meet Fred Hazan — Principal & Founder →</a></p>
             </div>
         </section>
 
