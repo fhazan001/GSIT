@@ -28,8 +28,8 @@ CISSP-certified cybersecurity executive and virtual CISO. Dual degrees in Comput
 
 ## Partners
 
-- **TPG Consulting** — ROI and CFO-facing security engagements: https://www.tpgconsulting.com/ (Fred's profile: https://www.tpgconsulting.com/our-people/fred-hazan/)
-- **SilverSky** — Managed security services co-sell: https://www.silversky.com/
+- **TPG Consulting** — Partner delivering security transformation, vCISO, compliance, policy, and program development services to TPG clients: https://www.tpgconsulting.com/ (Fred's profile: https://www.tpgconsulting.com/our-people/fred-hazan/)
+- **SilverSky** — Partner delivering compliance assessments, vCISO, and security program services within the SilverSky managed security portfolio: https://www.silversky.com/
 - **Toptal** — Independently vetted executive and technology consultant: https://toptal.com/
 
 ## Target Clients
