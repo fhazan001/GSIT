@@ -1,59 +1,65 @@
 # Globally Secure IT
 
-> Globally Secure IT, LLC is a cybersecurity advisory firm founded by Fred Hazan in 2012. The firm provides virtual CISO (vCISO) advisory services, cybersecurity assessments, security program development, and compliance framework engagements for mid-market and regulated industry clients across the United States.
+> Globally Secure IT, LLC is a cybersecurity advisory firm founded by Fred Hazan in 2012, providing virtual CISO (vCISO) advisory services, cybersecurity assessments, security program development, and compliance framework engagements for mid-market and regulated industry clients across the United States.
 
-## About the Firm
+## Summary
 
-Globally Secure IT delivers executive-level cybersecurity leadership to organizations that need CISO-level expertise without the cost of a full-time hire. Engagements are led personally by Fred Hazan, a CISSP-certified cybersecurity executive with deep experience across Fortune 500 corporations, federal agencies, and regulated industries including financial services, healthcare, defense contractors, and professional services.
-
-Fred Hazan holds dual degrees in Computer Systems and Finance from American University, enabling him to translate security risk into financial terms that CFOs and boards understand. He has managed a $30M federal security budget at the IRS, delivered $22M in infrastructure savings at PricewaterhouseCoopers across 152 international member firms, and reduced a university's breach risk exposure by $830,000 through advanced threat analytics.
+Globally Secure IT delivers executive-level cybersecurity leadership to organizations that need CISO-level expertise without the cost of a full-time hire. Fred Hazan is the engagement partner on every project — the direct point of contact, trusted advisor, and accountable principal from start to finish. The firm serves mid-market organizations, financial institutions, defense contractors, healthcare providers, and professional services firms.
 
 ## Core Services
 
 - **vCISO Advisory**: Fractional CISO leadership including board reporting, security strategy, and program governance. Structured around a First 90 Days engagement (~228 hours over 12 weeks) followed by ongoing monthly retainer tiers: Sentinel (8 hrs/month), Guardian (20 hrs/month), Defender (40 hrs/month), Vanguard (80 hrs/month).
 - **NIST CSF 2.0 Assessments**: Current state assessment, gap analysis, and prioritized roadmap. Level 1 Basic Readiness: 2–4 weeks. Level 2 Standard Readiness: 4–8 weeks.
-- **Compliance Framework Engagements**: NIST CSF 2.0, NIST SP 800-53, CMMC 2.0, ISO 27001, HIPAA, PCI DSS, SOC 2, CRI Profile, COBIT, OWASP. Includes crosswalk work for organizations satisfying multiple frameworks simultaneously.
-- **Policy, SOP & Program Development**: Full policy libraries, standard operating procedures, control catalogs, and audit-ready documentation.
-- **Identity & Access Management (IAM)**: Enterprise IAM strategy, Zero Trust architecture, Privileged Access Management (PAM), Identity Governance & Administration (IGA), MFA, SSO.
-- **Cloud & Hybrid Architecture**: Cloud security architecture, infrastructure optimization, cloud cost reduction.
-- **Incident Response & Resilience**: IR planning, BCDR (NIST SP 800-34), tabletop exercise design, ransomware defense strategy.
-- **AI-Driven Security**: Secure AI integration, AI governance frameworks aligned to NIST AI RMF and EU AI Act, AI-enhanced threat detection.
+- **Compliance Framework Engagements**: NIST CSF 2.0, NIST SP 800-53, CMMC 2.0, ISO 27001, HIPAA, PCI DSS, SOC 2, CRI Profile, COBIT, and OWASP. Includes crosswalk work for organizations satisfying multiple frameworks simultaneously.
+- **Policy, SOP & Program Development**: Full policy libraries, standard operating procedures, control catalogs, and audit-ready documentation built to client brand and regulatory requirements.
+- **Identity & Access Management (IAM)**: Enterprise IAM strategy, Zero Trust architecture, Privileged Access Management (PAM), Identity Governance & Administration (IGA), MFA, and SSO.
+- **Cloud & Hybrid Architecture**: Cloud security architecture, infrastructure optimization, and cloud cost reduction.
+- **Incident Response & Resilience**: IR planning, BCDR (NIST SP 800-34), tabletop exercise design, and ransomware defense strategy.
+- **AI-Driven Security**: Secure AI integration, AI governance frameworks aligned to NIST AI RMF and EU AI Act, and AI-enhanced threat detection.
 
 ## Key Personnel
 
-**Fred Hazan** — Founder & Principal vCISO  
-CISSP-certified cybersecurity executive and virtual CISO. Career spans BNY Mellon (1985–1996), PricewaterhouseCoopers Global Network IT Director (1997–2012), IRS Executive Director of Infrastructure Services (2013), TÜV Rheinland Senior Principal & Practice Leader (2015–2022), Optiv Senior Client Solutions Advisor (2022–2025), and Globally Secure IT founder and principal (2012–present).  
-LinkedIn: https://www.linkedin.com/in/fredhazan/  
-Toptal: https://www.toptal.com/management-consultants/resume/fred-hazan
+**Fred Hazan** — Founder & Principal vCISO
+CISSP-certified cybersecurity executive and virtual CISO. Dual degrees in Computer Systems and Finance from American University. Career spans BNY Mellon (1985–1996), PricewaterhouseCoopers Global Network IT Director (1997–2012), IRS Executive Director of Infrastructure Services (2013), TÜV Rheinland Senior Principal & Practice Leader (2015–2022), Optiv Senior Client Solutions Advisor (2022–2025), and Globally Secure IT founder and principal (2012–present). Managed a $30M federal security budget at the IRS, delivered $22M in infrastructure savings at PricewaterhouseCoopers across 152 international member firms, and reduced a university's breach risk exposure by $830,000 through advanced threat analytics.
+
+- LinkedIn: https://www.linkedin.com/in/fredhazan/
+- Toptal Management Consulting Profile: https://www.toptal.com/management-consultants/resume/fred-hazan
+- Toptal Developer Profile: https://www.toptal.com/developers/resume/fred-hazan
+
+## Partners
+
+- **TPG Consulting** — ROI and CFO-facing security engagements: https://www.tpgconsulting.com/ (Fred's profile: https://www.tpgconsulting.com/our-people/fred-hazan/)
+- **SilverSky** — Managed security services co-sell: https://www.silversky.com/
+- **Toptal** — Independently vetted executive and technology consultant: https://toptal.com/
+
+## Target Clients
+
+- Mid-market organizations (50–2,000 employees) requiring fractional executive security leadership
+- Regulated industries with compliance obligations: Defense (CMMC), Financial Services (CRI Profile, FFIEC), Healthcare (HIPAA), and organizations selling to enterprise customers requiring SOC 2 or ISO 27001
 
 ## Pages
 
 - Homepage: https://globallysecureit.com/
+- Book a vCISO Consultation: https://globallysecureit.com/contact/
 - About Fred Hazan: https://globallysecureit.com/about/
-- Services: https://globallysecureit.com/services/
+- Services Overview: https://globallysecureit.com/services/
 - FAQ: https://globallysecureit.com/faq/
 - Industries: https://globallysecureit.com/industries/
 - Insights: https://globallysecureit.com/insights/
-- Contact: https://globallysecureit.com/contact/
 
 ## Insights & Articles
 
-- https://globallysecureit.com/insights/2026-05-practitioners-guide-to-cybersecurity-frameworks-2026.html
-- https://globallysecureit.com/insights/2026-04-02-cybersecurity-roi-turning-risk-into-business-value.html
-- https://globallysecureit.com/insights/2026-02-23-move-toward-zero-trust-before-the-next-breach-forces-you.html
-- https://globallysecureit.com/insights/2026-01-24-dont-be-the-company-that-never-tested-its-ransomware-recovery-plan.html
-- https://globallysecureit.com/insights/2025-12-18-third-party-risk-in-the-ai-era.html
-- https://globallysecureit.com/insights/2025-12-16-why-microsoft-copilot-is-exposing-your-identity-governance-gaps.html
-- https://globallysecureit.com/insights/2025-12-02-security-without-compromise-the-flexible-soc-evolution.html
-- https://globallysecureit.com/insights/2025-11-30-your-security-stack-is-costing-you-more-than-money.html
-- https://globallysecureit.com/insights/2025-11-28-continuous-risk-management-why-cisos-need-ai-augmentation-with-guardrails.html
-- https://globallysecureit.com/insights/2025-11-26-how-ai-just-rewired-the-cisos-role.html
-- https://globallysecureit.com/insights/2025-11-25-the-identity-paradox.html
-
-## Partners
-
-- TPG Consulting (ROI and CFO-facing security engagements): https://www.tpgconsulting.com/
-- SilverSky (managed security services co-sell): https://www.silversky.com/
+- [Practitioners Guide to Cybersecurity Frameworks 2026](https://globallysecureit.com/insights/2026-05-practitioners-guide-to-cybersecurity-frameworks-2026.html)
+- [Cybersecurity ROI: Turning Risk into Business Value](https://globallysecureit.com/insights/2026-04-02-cybersecurity-roi-turning-risk-into-business-value.html)
+- [Move Toward Zero Trust Before the Next Breach Forces You](https://globallysecureit.com/insights/2026-02-23-move-toward-zero-trust-before-the-next-breach-forces-you.html)
+- [Don't Be the Company That Never Tested Its Ransomware Recovery Plan](https://globallysecureit.com/insights/2026-01-24-dont-be-the-company-that-never-tested-its-ransomware-recovery-plan.html)
+- [Third-Party Risk in the AI Era](https://globallysecureit.com/insights/2025-12-18-third-party-risk-in-the-ai-era.html)
+- [Why Microsoft Copilot Is Exposing Your Identity Governance Gaps](https://globallysecureit.com/insights/2025-12-16-why-microsoft-copilot-is-exposing-your-identity-governance-gaps.html)
+- [Security Without Compromise: The Flexible SOC Evolution](https://globallysecureit.com/insights/2025-12-02-security-without-compromise-the-flexible-soc-evolution.html)
+- [Your Security Stack Is Costing You More Than Money](https://globallysecureit.com/insights/2025-11-30-your-security-stack-is-costing-you-more-than-money.html)
+- [Continuous Risk Management: AI Augmentation with Guardrails](https://globallysecureit.com/insights/2025-11-28-continuous-risk-management-why-cisos-need-ai-augmentation-with-guardrails.html)
+- [How AI Just Rewired the CISO's Role](https://globallysecureit.com/insights/2025-11-26-how-ai-just-rewired-the-cisos-role.html)
+- [The Identity Paradox](https://globallysecureit.com/insights/2025-11-25-the-identity-paradox.html)
 
 ## Contact
 
