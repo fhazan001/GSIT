@@ -49,7 +49,7 @@ CISSP-certified cybersecurity executive and virtual CISO. Dual degrees in Comput
 
 ## Insights & Articles
 
-- [Practitioners Guide to Cybersecurity Frameworks 2026](https://globallysecureit.com/insights/2026-05-practitioners-guide-to-cybersecurity-frameworks-2026.html)
+- [Practitioners Guide to Cybersecurity Frameworks 2026](https://globallysecureit.com/insights/2026-05-28-practitioners-guide-to-cybersecurity-frameworks-2026.html)
 - [Cybersecurity ROI: Turning Risk into Business Value](https://globallysecureit.com/insights/2026-04-02-cybersecurity-roi-turning-risk-into-business-value.html)
 - [Move Toward Zero Trust Before the Next Breach Forces You](https://globallysecureit.com/insights/2026-02-23-move-toward-zero-trust-before-the-next-breach-forces-you.html)
 - [Don't Be the Company That Never Tested Its Ransomware Recovery Plan](https://globallysecureit.com/insights/2026-01-24-dont-be-the-company-that-never-tested-its-ransomware-recovery-plan.html)
