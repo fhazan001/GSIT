@@ -1,340 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Globally Secure IT | Schedule Your Security Consultation</title>
-    <meta name="description" content="Get strategic cybersecurity guidance. Schedule a consultation with Globally Secure IT's vCISO experts. Contact us for your security strategy review.">
-    <meta name="keywords" content="vCISO, cybersecurity consulting, IAM, Zero Trust, risk management, cloud security, compliance">
-    <meta name="robots" content="index, follow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fred Hazan</title>
+<meta name="description" content="Fred Hazan — cybersecurity and IT executive. Personal profile and career background.">
+<link rel="canonical" href="https://globallysecureit.com/">
+<link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Fred Hazan">
+<meta property="og:description" content="Cybersecurity and IT executive. Career background and credentials.">
+<meta property="og:url" content="https://globallysecureit.com/">
+<style>
+:root{
+  --brand-main:#333333;
+  --brand-accent:#7bafd4;
+  --muted:#6b6b6b;
+  --rule:#e5e5e5;
+  --tint:color-mix(in srgb, color-mix(in srgb, var(--brand-main), var(--brand-accent)), transparent 85%);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Avenir Next','Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  line-height:1.6;
+  color:var(--brand-main);
+  background:#ffffff;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block;}
+a{color:var(--brand-main);text-decoration:none;}
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://globallysecureit.com/contact/">
+.container{max-width:860px;margin:0 auto;padding:0 20px;}
+section{padding:4.5rem 0;}
 
-    <!-- OpenGraph / LinkedIn -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Globally Secure IT">
-    <meta property="og:title" content="Globally Secure IT | Virtual CISO & Cybersecurity Strategy">
-    <meta property="og:description" content="Executive-level cybersecurity leadership, vCISO advisory, Zero Trust, IAM, and risk management for modern enterprises.">
-    <meta property="og:url" content="https://globallysecureit.com/">
-    <meta property="og:image" content="https://globallysecureit.com/assets/images/og-globallysecureit.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+/* ---------- Hero ---------- */
+.hero{
+  background:var(--brand-main);
+  color:#ffffff;
+  padding:5rem 0;
+  text-align:center;
+}
+.hero img{
+  width:140px;height:140px;border-radius:50%;object-fit:cover;
+  margin:0 auto 1.75rem;
+  border:4px solid rgba(255,255,255,.25);
+}
+.hero h1{
+  font-size:3rem;
+  line-height:1.2;
+  margin-bottom:.75rem;
+  font-weight:700;
+}
+.hero .tagline{
+  font-size:1.35rem;
+  opacity:.95;
+  font-weight:400;
+}
+.hero .locale{
+  margin-top:1rem;
+  font-size:.9rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--brand-accent);
+  font-weight:600;
+}
 
-    <!-- X / Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Globally Secure IT | Virtual CISO & Cybersecurity Strategy">
-    <meta name="twitter:description" content="Executive-level cybersecurity leadership, vCISO advisory, Zero Trust, IAM, and risk management for modern enterprises.">
-    <meta name="twitter:image" content="https://globallysecureit.com/assets/images/og-globallysecureit.png">
-    <meta name="twitter:creator" content="@GloballySecure">
+/* ---------- Typography ---------- */
+h2{
+  font-size:2.5rem;
+  margin-bottom:1rem;
+  color:var(--brand-main);
+  text-align:center;
+  font-weight:700;
+}
+h2 + .rule{
+  width:60px;height:4px;background:var(--brand-accent);
+  margin:0 auto 2.5rem;border-radius:2px;
+}
+h3{
+  font-size:1.15rem;
+  font-weight:600;
+  color:var(--brand-main);
+  margin-bottom:.25rem;
+}
+p{margin-bottom:1.1rem;}
+p:last-child{margin-bottom:0;}
 
-    <!-- Favicons -->
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+.intro p{font-size:1.15rem;}
+.intro p:first-of-type{font-size:1.3rem;line-height:1.55;}
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="/css/main.css">
+.tinted{background-color:var(--tint);}
 
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "@id": "https://globallysecureit.com/#organization",
-          "name": "Globally Secure IT, LLC",
-          "url": "https://globallysecureit.com",
-          "logo": "https://globallysecureit.com/assets/images/logo.svg",
-          "description": "vCISO advisory, cybersecurity consulting, NIST CSF assessments, IAM, and security program development for mid-market and regulated industries.",
-          "foundingDate": "2012",
-          "founder": { "@id": "https://globallysecureit.com/#fred-hazan" },
-          "employee": { "@id": "https://globallysecureit.com/#fred-hazan" },
-          "sameAs": [
-            "https://www.linkedin.com/company/globally-secure-it/",
-            "https://twitter.com/GloballySecure"
-          ],
-          "areaServed": ["United States", "Global"],
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-516-946-1802",
-            "contactType": "Sales",
-            "email": "fred@globallysecureit.com"
-          },
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "4 Orchard Dr",
-            "addressLocality": "Woodbury",
-            "addressRegion": "NY",
-            "postalCode": "11797",
-            "addressCountry": "US"
-          }
-        },
-        {
-          "@type": "Person",
-          "@id": "https://globallysecureit.com/#fred-hazan",
-          "name": "Fred Hazan",
-          "jobTitle": "Founder & Principal Consultant, vCISO",
-          "description": "CISSP-certified cybersecurity executive and virtual CISO. Founder of Globally Secure IT, LLC.",
-          "url": "https://globallysecureit.com/about/",
-          "image": "https://globallysecureit.com/assets/images/headshot.jpg",
-          "sameAs": [
-            "https://www.linkedin.com/in/fredhazan/",
-            "https://www.toptal.com/management-consultants/resume/fred-hazan"
-          ],
-          "worksFor": { "@id": "https://globallysecureit.com/#organization" },
-          "knowsAbout": [
-            "Virtual CISO Advisory", "NIST CSF 2.0", "NIST SP 800-53",
-            "Zero Trust Architecture", "Identity and Access Management",
-            "Incident Response Planning", "HIPAA", "CMMC 2.0",
-            "ISO 27001", "PCI DSS", "Cybersecurity Risk Assessment",
-            "Security Program Development", "AI Security Governance",
-            "Policy and SOP Development"
-          ],
-          "hasCredential": {
-            "@type": "EducationalOccupationalCredential",
-            "name": "Certified Information Systems Security Professional (CISSP)"
-          }
-        }
-      ]
-    }
-    </script>
+/* ---------- Career ---------- */
+.role{
+  background:#ffffff;
+  border-left:4px solid var(--brand-accent);
+  padding:1.5rem 1.75rem;
+  margin-bottom:1.25rem;
+  box-shadow:0 2px 10px rgba(0,0,0,.06);
+  border-radius:0 5px 5px 0;
+}
+.role:last-child{margin-bottom:0;}
+.role .org{
+  display:block;
+  font-size:.82rem;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  color:var(--brand-accent);
+  font-weight:700;
+  margin-bottom:.4rem;
+}
+.role .years{
+  color:var(--muted);
+  font-weight:600;
+  letter-spacing:.03em;
+  text-transform:none;
+  font-size:.82rem;
+  margin-left:.5rem;
+}
+.role p{
+  margin:.6rem 0 0;
+  font-size:.98rem;
+  color:var(--muted);
+  line-height:1.65;
+}
+
+/* ---------- Credentials ---------- */
+.creds{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:1.25rem;
+}
+.cred{
+  background:#ffffff;
+  border-top:4px solid var(--brand-accent);
+  padding:1.5rem;
+  box-shadow:0 2px 10px rgba(0,0,0,.06);
+  border-radius:0 0 5px 5px;
+}
+.cred p{
+  margin:.4rem 0 0;
+  font-size:.92rem;
+  color:var(--muted);
+}
+
+/* ---------- Elsewhere ---------- */
+.elsewhere{text-align:center;}
+.elsewhere a{
+  display:inline-block;
+  background:var(--brand-accent);
+  color:#ffffff;
+  padding:1rem 2rem;
+  border-radius:5px;
+  font-weight:600;
+  transition:transform .2s, box-shadow .2s, background-color .2s;
+}
+.elsewhere a:hover{
+  background:#ffffff;
+  color:var(--brand-accent);
+  transform:translateY(-2px);
+  box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+/* ---------- Footer ---------- */
+footer{
+  background:#ffffff;
+  color:var(--brand-main);
+  text-align:center;
+  padding:2rem 0;
+  border-top:1px solid var(--rule);
+  font-size:.9rem;
+}
+
+@media (max-width:700px){
+  .hero{padding:3.5rem 0;}
+  .hero h1{font-size:2.1rem;}
+  .hero .tagline{font-size:1.1rem;}
+  .hero img{width:112px;height:112px;}
+  h2{font-size:1.9rem;}
+  section{padding:3.25rem 0;}
+  .role{padding:1.25rem 1.35rem;}
+}
+</style>
 </head>
-
-
 <body>
-    <header>
-        <nav class="container">
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <div class="logo">
-                <a href="/">
-                    <img src="/assets/images/logo.svg" alt="Globally Secure IT" loading="eager" decoding="sync" width="200" height="50">
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about/">About</a></li>
-                <li><a href="/services/">Services</a></li>
-                <li><a href="/faq/">FAQ</a></li>
-                <li><a href="/industries/">Industries</a></li>
-                <li><a href="/insights/">Insights</a></li>
-                <li><a href="/contact/">Contact</a></li>
-            </ul>
-         </nav>
-     </header>    
- <main>
 
-<section class="hero">
+<header class="hero">
   <div class="container">
-    <h1>Let's Talk</h1>
-    <p class="tagline">Start a conversation about your security strategy</p>
+    <img src="/assets/images/headshot.jpg" alt="Fred Hazan">
+    <h1>Fred Hazan</h1>
+    <p class="tagline">Cybersecurity &amp; IT Executive · CISSP</p>
+    <p class="locale">New York</p>
   </div>
-</section>
+</header>
 
-<section class="contact-section">
-   <div class="container contact-grid">
+<main>
 
-    <div class="contact-form">
-      <h2>Send a Message</h2>
-
-      <form id="contactForm" class="contact-form-element" action="https://formspree.io/f/meeeoejo" method="POST">
-
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-          <span class="error-message" id="emailError"></span>
-        </div>
-
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="6" required></textarea>
-        </div>
-
-        <!-- Hidden field to capture the context -->
-        <input type="hidden" id="contextField" name="Context" value="">
-        <input type="hidden" id="pageField" name="Page" value="">
-        <!-- Honeypot -->
-        <input type="text" name="_gotcha" style="display:none">
-
-        <!-- Optional -->
-        <input type="hidden" name="_subject" value="GlobalSecureIT Contact">
-        <input type="hidden" name="_template" value="table">
-
-        <button type="submit" id="submitBtn" class="btn-submit">Send Message</button>
-      </form>
-
-      <!-- Inline status message -->
-      <p id="formStatus" class="form-status"></p>
+  <section class="intro">
+    <div class="container">
+      <h2>About</h2>
+      <div class="rule"></div>
+      <p>I have spent more than three decades in technology and security — across application development, global infrastructure, federal government operations, and executive advisory.</p>
+      <p>My career has taken me through BNY Mellon, PricewaterhouseCoopers, the U.S. Internal Revenue Service, TÜV Rheinland, and Optiv, and through my own practice, Globally Secure IT, founded in 2012.</p>
+      <p>I hold a dual undergraduate degree in Computer Systems and Finance from The American University. That pairing has shaped how I work: I am equally at home with an architecture diagram and a balance sheet, and I have always been drawn to the place where the two meet — where a technical decision becomes a financial one.</p>
+      <p>The work I care most about sits in identity and access management, Zero Trust architecture, cloud and hybrid infrastructure, risk management, and the security questions raised by enterprise adoption of AI.</p>
     </div>
+  </section>
 
-  </div>
-</section>
+  <section class="tinted">
+    <div class="container">
+      <h2>Career</h2>
+      <div class="rule"></div>
+
+      <div class="role">
+        <span class="org">Globally Secure IT <span class="years">2012 – Present</span></span>
+        <h3>Founder &amp; Principal</h3>
+        <p>Founded an independent advisory practice working with mid-market and regulated-industry organizations on security strategy, governance, and program development.</p>
+      </div>
+
+      <div class="role">
+        <span class="org">Optiv <span class="years">2022 – 2025</span></span>
+        <h3>Senior Client Solutions Advisor &amp; Architect</h3>
+        <p>Technical and strategic advisor within enterprise engagements at one of North America's largest cybersecurity providers, focused on identity and access management and security stack rationalization.</p>
+      </div>
+
+      <div class="role">
+        <span class="org">TÜV Rheinland / OpenSky <span class="years">2015 – 2022</span></span>
+        <h3>Senior Principal Consultant &amp; Practice Leader</h3>
+        <p>Advanced from Senior Associate to Senior Principal over seven years, ultimately leading three practices: Advanced Cyber Defense, Governance Risk &amp; Compliance, and Cloud. Built Zero Trust architecture, identity governance, and enterprise risk management programs.</p>
+      </div>
+
+      <div class="role">
+        <span class="org">U.S. Department of the Treasury — IRS <span class="years">2013</span></span>
+        <h3>Executive Director, Infrastructure Services</h3>
+        <p>Directed three branches with 225 employees and a $30M budget, responsible for the infrastructure behind filing season applications — enterprise identity management, electronic messaging, mobile access, virtualization, and ITIL service management.</p>
+      </div>
+
+      <div class="role">
+        <span class="org">PricewaterhouseCoopers LLP <span class="years">1997 – 2012</span></span>
+        <h3>Global Network IT Director &amp; Architect</h3>
+        <p>A fifteen-year career advancing from Senior Technical Architect to Global IT Director, leading architecture initiatives across 152 international member firms. Designed secure identity management (SAML SSO, two-factor authentication), global remote access architecture, and business continuity programs, including a global VPN initiative that returned $22M in savings.</p>
+      </div>
+
+      <div class="role">
+        <span class="org">BNY Mellon <span class="years">1985 – 1996</span></span>
+        <h3>Assistant Vice President</h3>
+        <p>A twelve-year career managing application development for four critical bank custody systems. Led a team of 40 staff and consultants to deliver the bank's first web application, and managed systems consolidation through three mergers and acquisitions.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Credentials &amp; Education</h2>
+      <div class="rule"></div>
+      <div class="creds">
+        <div class="cred">
+          <h3>CISSP</h3>
+          <p>Certified Information Systems Security Professional</p>
+        </div>
+        <div class="cred">
+          <h3>ITIL Management</h3>
+          <p>IT service management framework</p>
+        </div>
+        <div class="cred">
+          <h3>AWS</h3>
+          <p>Partner Business Certified · Technical Certified · Security Specialist</p>
+        </div>
+        <div class="cred">
+          <h3>BS, Computer Systems</h3>
+          <p>The American University, Washington, D.C.</p>
+        </div>
+        <div class="cred">
+          <h3>BS, Finance</h3>
+          <p>The American University, Washington, D.C.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="elsewhere tinted">
+    <div class="container">
+      <h2>Elsewhere</h2>
+      <div class="rule"></div>
+      <p><a href="https://www.linkedin.com/in/fredhazan/" rel="me">LinkedIn</a></p>
+    </div>
+  </section>
 
 </main>
-<!-- CONTACT CTA -->
-<section class="cta-section"> 
-  <div class="container">
-    <h2>Ready to Transform Your Security Strategy?</h2>
-    <p class="cta-tagline">
-      Let's connect and explore how Globally Secure IT can help you achieve your vision
-    </p>
-  </div>
-</section>
 
 <footer>
   <div class="container">
-    <p>&copy; <span id="year"></span> Globally Secure IT, LLC. All rights reserved.</p>
-    <p class="footer-tagline">
-      Transforming Risk into Competitive Advantage Since 2012
-    </p>
+    <p>&copy; <span id="yr"></span> Fred Hazan</p>
   </div>
 </footer>
 
-<script>
-  // 1. AUTO-POPULATE PAGE AND CONTEXT
-  (function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    
-    // Check for 'Page' param, fallback to 'General' if missing
-    const pageInput = document.getElementById('pageField');
-    if (pageInput) {
-      pageInput.value = urlParams.get('Page') || "General";
-    }
-
-    // Check for 'Context' param, fallback to 'General' if missing
-    const contextInput = document.getElementById('contextField');
-    if (contextInput) {
-      contextInput.value = urlParams.get('Context') || "General";
-    }
-  })();
-
-  // Footer year
-  document.getElementById("year").textContent = new Date().getFullYear();
-
-  // Email validation function
-  function validateEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  }
-
-  // Formspree AJAX submit with UX tweaks and validation
-  const form = document.getElementById('contactForm');
-  const submitBtn = document.getElementById('submitBtn');
-  const statusMsg = document.getElementById('formStatus');
-  const emailInput = document.getElementById('email');
-  const emailError = document.getElementById('emailError');
-
-  // Real-time email validation
-  if (emailInput) {
-    emailInput.addEventListener('blur', function() {
-      if (this.value && !validateEmail(this.value)) {
-        emailError.textContent = 'Please enter a valid email address';
-        emailError.style.display = 'block';
-        this.classList.add('invalid');
-      } else {
-        emailError.textContent = '';
-        emailError.style.display = 'none';
-        this.classList.remove('invalid');
-      }
-    });
-
-    emailInput.addEventListener('input', function() {
-      if (this.classList.contains('invalid') && validateEmail(this.value)) {
-        emailError.textContent = '';
-        emailError.style.display = 'none';
-        this.classList.remove('invalid');
-      }
-    });
-  }
-
-  if (form) {
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault();
-
-      // Validate email before submission
-      const email = emailInput.value;
-      if (!validateEmail(email)) {
-        emailError.textContent = 'Please enter a valid email address';
-        emailError.style.display = 'block';
-        emailInput.classList.add('invalid');
-        emailInput.focus();
-        return;
-      }
-
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending…';
-      submitBtn.classList.add('btn-loading');
-
-      const formData = new FormData(form);
-
-      try {
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
-
-        if (response.ok) {
-          statusMsg.style.display = 'block';
-          statusMsg.textContent = 'Thank you — your message has been sent successfully!  We will be in touch shortly';
-          statusMsg.className = 'form-status success'; // Ensures both classes are applied
-          statusMsg.classList.add('success');
-          statusMsg.classList.remove('error');
-
-          form.style.display = 'none';
-          form.reset();
-
-          // Small pause, then go home
-          setTimeout(() => {
-            window.location.href = '/';
-          }, 5000);
-        } else {
-          throw new Error('Submission failed');
-        }
-
-      } catch (error) {
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Message';
-        submitBtn.classList.remove('btn-loading');
-
-        statusMsg.style.display = 'block';
-        statusMsg.textContent = 'There was a problem sending your message. Please try again.';
-        statusMsg.classList.add('error');
-        statusMsg.classList.remove('success');
-      }
-    });
-  }
-// Mobile Menu Toggle
-const mobileMenu = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
-
-if (mobileMenu) {
-  mobileMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-
-  // Close menu when a link is clicked
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-    });
-  });
-}
-
-</script>
-
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
 </html>
